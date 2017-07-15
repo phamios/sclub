@@ -717,5 +717,8 @@
         </div>
         <div id="popup-holder"></div>
  
+        <script type="text/javascript" src="<?php echo base_url()?>/templates/index_files/app.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>/templates/index_files/wp-embed.min.js"></script>
+                
     </body>
 </html>
