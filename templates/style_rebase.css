@@ -1,0 +1,10 @@
+body .header #navBar {
+    background-color:#000;
+    color:white;
+}
+#navBar button {
+    color:white;
+}
+.menu .label {
+    color:white;
+}

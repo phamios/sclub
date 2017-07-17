@@ -25,7 +25,7 @@
 
 
         <!-- This site is optimized with the Yoast SEO plugin v3.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
-        <meta name="description" content="ETQ Amsterdam creates a modern minimalist perspective on footwear. Shop the latest collection online with free worldwide shipping.">
+        <!-- <meta name="description" content="ETQ Amsterdam creates a modern minimalist perspective on footwear. Shop the latest collection online with free worldwide shipping.">
         <meta name="robots" content="noodp">
         <link rel="canonical" href="https://www.etq-amsterdam.com/">
         <meta property="og:locale" content="en_US">
@@ -40,34 +40,29 @@
         <meta name="twitter:title" content="Home - ETQ Amsterdam">
         <meta name="twitter:site" content="@ETQAmsterdam">
         <meta name="twitter:image" content="https://www.etq-amsterdam.com/app/uploads/2016/08/ETQHeaderDesktop2.jpg">
-        <meta name="twitter:creator" content="@ETQAmsterdam">
-        <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/www.etq-amsterdam.com\/","name":"ETQ Amsterdam","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.etq-amsterdam.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-        <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.etq-amsterdam.com\/","sameAs":["https:\/\/www.facebook.com\/etqams\/","https:\/\/www.instagram.com\/etqamsterdam\/","https:\/\/twitter.com\/ETQAmsterdam"],"name":"ETQ Amsterdam B.V.","logo":""}</script>
+        <meta name="twitter:creator" content="@ETQAmsterdam"> -->
         <!-- / Yoast SEO plugin. -->
 
-        <link rel="https://api.w.org/" href="https://www.etq-amsterdam.com/wp-json/">
+        <!-- <link rel="https://api.w.org/" href="https://www.etq-amsterdam.com/wp-json/">
         <link rel="shortlink" href="https://www.etq-amsterdam.com/">
         <link rel="alternate" type="application/json+oembed" href="https://www.etq-amsterdam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.etq-amsterdam.com%2F">
         <link rel="alternate" type="text/xml+oembed" href="https://www.etq-amsterdam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.etq-amsterdam.com%2F&amp;format=xml">
+  -->
  
         
             <script type="text/javascript" src="<?php echo base_url() ?>/templates/index_files/mt.js.tải xuống"></script>
             <link id="MonoTypeFontApiFontTracker" type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/templates/index_files/1.css">
         <script async="" src="<?php echo base_url() ?>/templates/index_files/modules-6d735a6d66d71e4b5154e075915a0fc8.js.tải xuống"></script>
         <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
+
+        <link rel="stylesheet" href="<?php echo base_url() ?>/templates/style_rebase.css">
+        <link rel="stylesheet" href="<?php echo base_url() ?>/templates/font/css/font-awesome.min.css">
+
     </head>
     <body class="is-desktop has-header-background is-loading">
  
         <div class="header">
-            <nav id="navBar" class="navBar fixed ready top-hide top" style="">
-                <button role="button" class="menu">
-                    Menu<span class="label">MENU</span>
-                </button>
-                <span class="logo" data-href="https://www.etq-amsterdam.com">ETQ.</span>
-                <aside class="cartcount show">0<span class="label">BAG</span></aside>
-            </nav>    <figure id="overlay" class="overlay">
-                <button>X</button>
-            </figure>
+            <?php $this->load->view('widget/header');?>
         </div>
 
         <aside id="sidemenu" class="sidemenu">
