@@ -1,3 +1,11 @@
+/**
+    Override CSS for Sclub
+**/
+body {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+    font-size: 12px;
+}
 body .header #navBar {
     background-color:#000;
     color:white;
@@ -7,4 +15,33 @@ body .header #navBar {
 }
 .menu .label {
     color:white;
+}
+
+.content_right_menu{
+    letter-spacing: 0px;
+    padding-top:50%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px; 
+    padding-left:10%;
+    padding-right:10%;
+    color:black;
+}
+.content_right_menu a {
+    color:grey;
+    font-size:11px; 
+}
+.content_right_menu input{
+    height: 30px;
+}
+
+.content_right_menu span{
+    color:grey;
+    font-size: 11px;
+    clear: both;
+}
+
+.content_right_menu h5{
+    font-size: 14px;
+    color: grey;
+    font-weight: 400px;
 }

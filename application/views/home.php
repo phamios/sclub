@@ -48,16 +48,17 @@
         <link rel="alternate" type="application/json+oembed" href="https://www.etq-amsterdam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.etq-amsterdam.com%2F">
         <link rel="alternate" type="text/xml+oembed" href="https://www.etq-amsterdam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.etq-amsterdam.com%2F&amp;format=xml">
   -->
- 
-        
-            <script type="text/javascript" src="<?php echo base_url() ?>/templates/index_files/mt.js.tải xuống"></script>
-            <link id="MonoTypeFontApiFontTracker" type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/templates/index_files/1.css">
+  
+        <script type="text/javascript" src="<?php echo base_url() ?>/templates/index_files/mt.js.tải xuống"></script>
+        <link id="MonoTypeFontApiFontTracker" type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/templates/index_files/1.css">
         <script async="" src="<?php echo base_url() ?>/templates/index_files/modules-6d735a6d66d71e4b5154e075915a0fc8.js.tải xuống"></script>
         <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
 
         <link rel="stylesheet" href="<?php echo base_url() ?>/templates/style_rebase.css">
         <link rel="stylesheet" href="<?php echo base_url() ?>/templates/font/css/font-awesome.min.css">
-
+        <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&amp;subset=vietnamese" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body class="is-desktop has-header-background is-loading">
  
