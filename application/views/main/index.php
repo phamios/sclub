@@ -1,5 +1,6 @@
 <div class="transform-container">
-    <div class="no-results">
+ 
+     <div class="no-results">
         <h1 id="no-filter-title" class="no-filter-txt introduce ng-hide">Nothing found</h1>
         <p id="no-filter-text" class="no-filter-txt introduce ng-hide">Please update your filters</p>
     </div>
@@ -34,7 +35,7 @@
             </span>
         </div>					
     			
-    </section>
+    </section> 
 </div>	
 <footer id="collection-footer" class="footer-bar">
     <ul>

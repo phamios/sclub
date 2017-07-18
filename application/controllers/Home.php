@@ -11,7 +11,18 @@ class Home extends CI_Controller {
     }
 
     public function index() {
+        $this->load->model('user_model');
+        $this->user_model->listAllUser();
         $this->load->view('home');
+    }
+
+    public function login($err = null){
+        if($err){
+            $data['notify_error'] = "Mật khẩu, Tên đăng nhập không đúng, hoặc tài khoản của bạn chưa được kích hoạt !";
+             $this->load->view('home',$data);
+        } else {
+            $this->load->view('home');
+        }
     }
 
     public function register(){

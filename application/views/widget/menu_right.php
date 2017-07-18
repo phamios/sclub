@@ -4,11 +4,12 @@
     </ul> -->
     <div class="content_right_menu">
        <h5 style="font-weight: bold;">Đăng nhập tài khoản chính</h5>
+       <?php echo form_open_multipart('Authen/login', array('role' => "form")); ?>
         <input type="text" value="" class="form-control" name="useremail" id="useremail" placeholder="Email đăng nhập"/>
         <input type="text" value="" class="form-control" name="userpass" id="userpass" placeholder="Mật khẩu đăng nhập" /> 
         <p><span><a href="<?php echo site_url();?>">Bạn quên mật khẩu ?</a></span></p>
-        
         <button class="form-control btn btn-primary" name="loginsubmit" >Đăng nhập</button>
+        <?php echo form_close(); ?>
         <p></p>
        <hr/> 
        <h5 style="font-weight: bold;">Bạn chưa có tài khoản</h5>

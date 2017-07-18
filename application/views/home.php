@@ -74,7 +74,16 @@
         </aside>
         <main id="js-page-view" class="page-view app-started">	
             <main id="home" class="page home-page" style="opacity: 1;">
-                <?php $this->load->view('main/index');?> 
+                <!-- -----------Load------- -->
+                <?php if ($this->router->fetch_class() == "home"): ?>
+                    <?php if ($this->router->fetch_method() == "index"): ?>
+                        <?php $this->load->view('main/index');?> 
+                    <?php endif; ?>
+                    <?php if ($this->router->fetch_method() == "login"): ?>
+                        <?php $this->load->view('main/login/index');?> 
+                    <?php endif; ?>
+                <?php endif;?>
+                <!-- ------------End load-------------- -->
             </main>
         </main>
 

@@ -11,25 +11,27 @@ if (!defined('BASEPATH'))
 
 class User_model extends CI_Model {
 
+
+    var $db_user = "tbl_user";
+    var $db_userinfo = "tbl_userinfo";
+
     function __construct() {
-        parent::__construct();
+        parent::__construct(); 
         $this->load->database();
     }
 
     /**
     ** List all user from db
     **/
-    public function listAll() { 
+    public function listAllUser() { 
         $this->db->order_by('id', "asc");
-        $query = $this->db->get('es_user');
+        $query = $this->db->get($this->db_user);
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {
             return 0;
         }
     }
-
-
     
     /**
     ** Login into system, it will be check the authentication
@@ -38,9 +40,9 @@ class User_model extends CI_Model {
     public function authentication($username= null,$userpass=null){
         $this->db->where(array(
             'username'=>$username,
-            'userpass'=>$userpass,
+            'username'=>$userpass,
         ));
-        $query = $this->db->get('es_user');
+        $query = $this->db->get($this->db_user);
         if($query->num_rows() > 0){
             foreach($query->result() as $result){
                  if($this->checkActive($result->id) > 0){
@@ -62,8 +64,8 @@ class User_model extends CI_Model {
     **/
     public function checkActive($userid = null){
         $this->db->where('id',$userid);
-        $this->db->where('userstatus',1);
-        $query = $this->db->get('es_user');
+        $this->db->where('status',1);
+        $query = $this->db->get($this->db_user);
         if($query->num_rows() > 0){
             return 1;
         } else {
@@ -72,7 +74,7 @@ class User_model extends CI_Model {
     }
 
 
-
+//----------------------------------------------------------------------------------------------------------------------------------
     public function getUserType($userid = null){
         $this->db->where('id',$userid);
         $this->db->where('userstatus',1);
