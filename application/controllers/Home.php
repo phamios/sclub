@@ -11,8 +11,8 @@ class Home extends CI_Controller {
     }
 
     public function index() {
-        $this->load->model('user_model');
-        $this->user_model->listAllUser();
+        $this->load->model('userinfo_model');
+        $this->userinfo_model->listAllUser();
         $this->load->view('home');
     }
 

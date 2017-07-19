@@ -9,7 +9,7 @@ date_default_timezone_set('Asia/Bangkok');
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class User_model extends CI_Model {
+class UserInfo_model extends CI_Model {
 
 
     var $db_user = "tbl_user";
