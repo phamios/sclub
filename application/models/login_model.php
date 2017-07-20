@@ -2,7 +2,11 @@
 
 class Login_model extends CI_Model
 {
-    
+    function __construct() {
+        // Call the Model constructor
+        parent::__construct();
+        $this->load->database();
+    }
     /**
      * This function used to check the login credentials of the user
      * @param string $email : This is email of the user

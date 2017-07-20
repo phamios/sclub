@@ -39,11 +39,11 @@ class Login extends CI_Controller
         
         if(!isset($isLoggedIn) || $isLoggedIn != TRUE)
         {
-            $this->load->view('admin/login');
+            $this->load->view('admincp/login');
         }
         else
         {
-            redirect('admin/dashboard');
+            redirect('admincp/dashboard');
         }
     }
     
