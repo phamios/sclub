@@ -13,7 +13,7 @@ class Home extends CI_Controller {
     public function index() {
         $this->load->model('userinfo_model');
         $this->userinfo_model->listAllUser();
-        $this->load->view('home');
+        $this->load->view('main');
     }
 
     public function login($err = null){

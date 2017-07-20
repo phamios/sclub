@@ -22,32 +22,7 @@
         <![endif]-->
 
         <meta name="google-site-verification" content="d3N7Vn5vAyjyJL1k1eVTyPGqday2fsSAyBRi4I5Jl74">
-
-
-        <!-- This site is optimized with the Yoast SEO plugin v3.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
-        <!-- <meta name="description" content="ETQ Amsterdam creates a modern minimalist perspective on footwear. Shop the latest collection online with free worldwide shipping.">
-        <meta name="robots" content="noodp">
-        <link rel="canonical" href="https://www.etq-amsterdam.com/">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Home - ETQ Amsterdam">
-        <meta property="og:description" content="ETQ Amsterdam creates a modern minimalist perspective on footwear. Shop the latest collection online with free worldwide shipping.">
-        <meta property="og:url" content="https://www.etq-amsterdam.com/">
-        <meta property="og:site_name" content="ETQ Amsterdam">
-        <meta property="og:image" content="https://www.etq-amsterdam.com/app/uploads/2016/08/ETQHeaderDesktop2.jpg">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:description" content="ETQ Amsterdam creates a modern minimalist perspective on footwear. Shop the latest collection online with free worldwide shipping.">
-        <meta name="twitter:title" content="Home - ETQ Amsterdam">
-        <meta name="twitter:site" content="@ETQAmsterdam">
-        <meta name="twitter:image" content="https://www.etq-amsterdam.com/app/uploads/2016/08/ETQHeaderDesktop2.jpg">
-        <meta name="twitter:creator" content="@ETQAmsterdam"> -->
-        <!-- / Yoast SEO plugin. -->
-
-        <!-- <link rel="https://api.w.org/" href="https://www.etq-amsterdam.com/wp-json/">
-        <link rel="shortlink" href="https://www.etq-amsterdam.com/">
-        <link rel="alternate" type="application/json+oembed" href="https://www.etq-amsterdam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.etq-amsterdam.com%2F">
-        <link rel="alternate" type="text/xml+oembed" href="https://www.etq-amsterdam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.etq-amsterdam.com%2F&amp;format=xml">
-  -->
+ 
   
         <script type="text/javascript" src="<?php echo base_url() ?>/templates/index_files/mt.js.tải xuống"></script>
         <link id="MonoTypeFontApiFontTracker" type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/templates/index_files/1.css">
@@ -58,9 +33,10 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>/templates/font/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&amp;subset=vietnamese" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     </head>
-    <body class="is-desktop has-header-background is-loading">
+    <body>
  
         <div class="header">
             <?php $this->load->view('widget/header');?>
@@ -72,8 +48,8 @@
         <aside id="shoppingcart" class="shoppingcart" data-quantity="0">
              <?php $this->load->view('widget/menu_right');?>
         </aside>
-        <main id="js-page-view" class="page-view app-started">	
-            <main id="home" class="page home-page" style="opacity: 1;">
+        <!-- <main id="js-page-view" class="page-view app-started">	 -->
+            <!-- <main id="home" class="page home-page" style="opacity: 1;"> -->
                 <!-- -----------Load------- -->
                 <?php if ($this->router->fetch_class() == "home"): ?>
                     <?php if ($this->router->fetch_method() == "index"): ?>
@@ -84,8 +60,8 @@
                     <?php endif; ?>
                 <?php endif;?>
                 <!-- ------------End load-------------- -->
-            </main>
-        </main>
+            <!-- </main> -->
+        <!-- </main> -->
 
          
 
@@ -110,7 +86,8 @@
 
         <script type="text/javascript" src="<?php echo base_url() ?>/templates/index_files/app.min.js.tải xuống"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>/templates/index_files/wp-embed.min.js.tải xuống"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
         <div id="ads"></div>
     </body>
 </html>

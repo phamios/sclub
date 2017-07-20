@@ -1,47 +1,103 @@
-/**
-    Override CSS for Sclub
-**/
-body {
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0px;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* #main {
+    transition: margin-left .5s;
+    padding: 16px;
+} */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.navbar {
+    border-radius: 1px;
+}
+
+/** ------------------------------------- **/
+
+.sidenavRight {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px;
     font-size: 12px;
 }
-body .header #navBar {
-    background-color:#000;
-    color:white;
+
+.sidenavRight a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none; 
+    color: #bdc3c7;
+    display: block;
+    transition: 0.3s; 
 }
-#navBar button {
-    color:white;
+
+.sidenavRight a:hover, .offcanvas a:focus{
+    color: #bdc3c7;
 }
-.menu .label {
+
+.sidenavRight .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#navbar{
     color:white;
+    margin-top:5px;
+}
+ .navbar{
+     margin-bottom: 5px;
+ }
+
+@media screen and (max-height: 450px) {
+  .sidenavRight {padding-top: 15px;}
+  .sidenavRight a {font-size: 18px;}
+}
+ 
+@media screen and (min-width: 768px) {
+ 
 }
 
 .content_right_menu{
-    letter-spacing: 0px;
-    padding-top:50%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px; 
-    padding-left:10%;
-    padding-right:10%;
-    color:black;
-}
-.content_right_menu a {
-    color:grey;
-    font-size:11px; 
-}
-.content_right_menu input{
-    height: 30px;
-}
-
-.content_right_menu span{
-    color:grey;
+    padding:25px;
     font-size: 11px;
-    clear: both;
-}
-
-.content_right_menu h5{
-    font-size: 14px;
-    color: grey;
-    font-weight: 400px;
 }
