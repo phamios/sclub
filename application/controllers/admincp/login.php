@@ -13,8 +13,7 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('login_model');
-        $this->load->library('session');
-
+        $this->load->library('session'); 
         $this->load->helper('url');
         $this->load->library('upload');
         $this->load->library('pagination');
