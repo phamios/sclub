@@ -39,7 +39,7 @@ class Login extends CI_Controller
         
         if(!isset($isLoggedIn) || $isLoggedIn != TRUE)
         {
-            $this->load->view('admincp/login');
+            $this->load->view('admin/login');
         }
         else
         {
@@ -90,7 +90,7 @@ class Login extends CI_Controller
             {
                 $this->session->set_flashdata('error', 'Email or password mismatch');
                 
-                redirect('admin/login');
+                redirect('admincp/login');
             }
         }
     }
