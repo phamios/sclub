@@ -11,7 +11,7 @@
     <!-- Ionicons 2.0.0 -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="<?php echo base_url(); ?>assets/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url(); ?>/assets/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
          folder instead of downloading all of them to reduce the load. -->
     <link href="<?php echo base_url(); ?>assets/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
@@ -56,13 +56,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?php echo base_url(); ?>assets/dist/img/avatar.png" class="user-image" alt="User Image"/>
+                  <img src="<?php echo base_url(); ?>template/assets/dist/img/avatar.png" class="user-image" alt="User Image"/>
                   <span class="hidden-xs"><?php echo $name; ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="<?php echo base_url(); ?>assets/dist/img/avatar.png" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url(); ?>template/assets/dist/img/avatar.png" class="img-circle" alt="User Image" />
                     <p>
                       <?php echo $name; ?>
                       <small><?php echo $role_text; ?></small>
@@ -71,10 +71,10 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="<?php echo base_url(); ?>loadChangePass" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change Password</a>
+                      <a href="<?php echo site_url('admincp/user/loadChangePass'); ?>" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change Password</a>
                     </div>
                     <div class="pull-right">
-                      <a href="<?php echo base_url(); ?>logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
+                      <a href="<?php echo site_url('admincp/user/logout'); ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
                     </div>
                   </li>
                 </ul>

@@ -23,11 +23,11 @@
       <div class="login-box-body">
         <p class="login-box-msg">Sign In</p>
         <?php $this->load->helper('form'); ?>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12">
                 <?php echo validation_errors('<div class="alert alert-danger alert-dismissable">', ' <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button></div>'); ?>
             </div>
-        </div>
+        </div> -->
         <?php
         $this->load->helper('form');
         $error = $this->session->flashdata('error');
@@ -49,7 +49,7 @@
             </div>
         <?php } ?>
         
-        <form action="<?php echo base_url(); ?>loginMe" method="post">
+        <form action="<?php echo site_url('admincp/login/loginMe'); ?>" method="post">
           <div class="form-group has-feedback">
             <input type="email" class="form-control" placeholder="Email" name="email" required />
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -72,7 +72,7 @@
           </div>
         </form>
 
-        <a href="<?php echo base_url() ?>forgotPassword">Forgot Password</a><br>
+        <a href="<?php echo site_url('admincp/login/forgotPassword') ?>">Forgot Password</a><br>
         
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->

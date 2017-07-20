@@ -13,6 +13,14 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('login_model');
+        $this->load->library('session');
+
+        $this->load->helper('url');
+        $this->load->library('upload');
+        $this->load->library('pagination');
+        $this->load->helper('cookie');
+        $this->load->helper('text');
+        $this->load->helper(array('form', 'url'));
     }
 
     /**
@@ -32,11 +40,11 @@ class Login extends CI_Controller
         
         if(!isset($isLoggedIn) || $isLoggedIn != TRUE)
         {
-            $this->load->view('login');
+            $this->load->view('admin/login');
         }
         else
         {
-            redirect('/dashboard');
+            redirect('admin/dashboard');
         }
     }
     
@@ -62,6 +70,7 @@ class Login extends CI_Controller
             
             $result = $this->login_model->loginMe($email, $password);
             
+
             if(count($result) > 0)
             {
                 foreach ($result as $res)
@@ -75,14 +84,14 @@ class Login extends CI_Controller
                                     
                     $this->session->set_userdata($sessionArray);
                     
-                    redirect('/dashboard');
+                    redirect('admin/dashboard');
                 }
             }
             else
             {
                 $this->session->set_flashdata('error', 'Email or password mismatch');
                 
-                redirect('/login');
+                redirect('admin/login');
             }
         }
     }
@@ -92,7 +101,7 @@ class Login extends CI_Controller
      */
     public function forgotPassword()
     {
-        $this->load->view('forgotPassword');
+        $this->load->view('admin/forgotPassword');
     }
     
     /**
@@ -177,7 +186,7 @@ class Login extends CI_Controller
         
         if ($is_correct == 1)
         {
-            $this->load->view('newPassword', $data);
+            $this->load->view('admin/newPassword', $data);
         }
         else
         {
