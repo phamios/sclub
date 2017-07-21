@@ -57,9 +57,10 @@ class Login extends CI_Controller
         $this->load->library('form_validation');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|max_length[128]|xss_clean|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|max_length[32]|');
-        
+         
         if($this->form_validation->run() == FALSE)
         {
+           
             $this->index();
         }
         else
@@ -68,8 +69,7 @@ class Login extends CI_Controller
             $password = $this->input->post('password');
             
             $result = $this->login_model->loginMe($email, $password);
-            
-
+             
             if(count($result) > 0)
             {
                 foreach ($result as $res)
@@ -88,6 +88,7 @@ class Login extends CI_Controller
             }
             else
             {
+                  
                 $this->session->set_flashdata('error', 'Email or password mismatch');
                 
                 redirect('admincp/login');

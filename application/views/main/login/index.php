@@ -1,22 +1,27 @@
-<div class="transform-container">
- 
-     <div class="no-results">
-        <h1 id="no-filter-title" class="no-filter-txt introduce ng-hide">Nothing found</h1>
-        <p id="no-filter-text" class="no-filter-txt introduce ng-hide">Please update your filters</p>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><span style="color:#e74c3c"><?php echo $notify_error;?></span></p>
+        <p><h3 style="text-align:center;">Đăng nhập Sclub</h3></p>
+        <?php echo form_open_multipart('Authen/login', array('role' => "form")); ?>
+        <input type="text" value="" class="form-control" name="useremail" id="useremail" placeholder="Email đăng nhập"/>
+        <br/>
+        <input type="text" value="" class="form-control" name="userpass" id="userpass" placeholder="Mật khẩu đăng nhập" />
+        <h5 style="color:#bdc3c7"><a href="<?php echo site_url(); ?>">Bạn quên mật khẩu ?</a></h5>
+        <br/>
+        <button class="form-control btn btn-primary" name="loginsubmit" >Đăng nhập</button>
+        <?php echo form_close(); ?>
+        <p></p>
+        <hr/> 
+        <h5 style="font-weight: bold;">Bạn chưa có tài khoản ?</h5>
+        <a href="<?php echo site_url('home/register');?>" class="form-control btn btn-primary" name="registersubmit" >Đăng Ký Ngay</a> <br/>
+
     </div>
+    <div class="col-md-4"></div>
+</div>
 
-    <section id="catalog" class="collectionview small-thumbs show">
-       Đăng nhập sai 
-    </section> 
-</div>	
-<footer id="collection-footer" class="footer-bar">
-    <ul>
-        <li><button data-rows="large" class="items row1 up"><span>1</span><span class="hover">1</span></button></li>
-        <li><button data-rows="medium" class="items row2  down"><span>2</span><span class="hover">2</span></button></li>
-        <li class="hide-for-small"><button data-rows="small" class="items row4 active"><span>4</span><span class="hover">4</span></button></li>
-    </ul>
 
-    <nav class="footerbuttons show">
-        <button id="filterBtn" class=""><span>Filter <strong class="filtercount"></strong></span><span class="hover">Filter <strong class="filtercount"></strong></span></button>
-    </nav>
-</footer>
+
