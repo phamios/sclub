@@ -11,12 +11,12 @@ class Authen extends CI_Controller {
     }
 
 
-    public function login() {
-        $this->load->model('user_model');
+    public function login($error=null) {
+        $this->load->model('userinfo_model');
         if (isset($_REQUEST['loginsubmit'])) {
             $username = $this->input->post('useremail', true);
             $password = $this->input->post('userpass', true);
-            $result = $this->user_model->authentication($username,$password);
+            $result = $this->userinfo_model->authentication($username,$password);
             if($result <> 0) {
                redirect('home/index');
             }else{

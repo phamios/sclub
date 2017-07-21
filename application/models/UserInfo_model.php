@@ -9,7 +9,7 @@ date_default_timezone_set('Asia/Bangkok');
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class UserInfo_model extends CI_Model {
+class Userinfo_model extends CI_Model {
 
 
     var $db_user = "tbl_user";
@@ -73,6 +73,52 @@ class UserInfo_model extends CI_Model {
         }
     }
 
+    public function insertUserStep1($usertype=null,$username=null,$fullname=null,$socialnumber=null,$placesocialnumber=null,
+                    $userpass=null,$useremail=null,$userphone=null,$datenumber=null){
+        $username = $useremail;
+        if($this->checkExitUser($username) == 1){
+            $data = array( 
+                'username'=>$username,
+                'userpass'=>$userpass, 
+                'usertype'=>$usertype, 
+                'balance'=>0,
+                'status'=>0,
+                'createdate'=>date("d-m-Y h:m:s"),
+            );
+            $this->db->insert($this->db_user,$data);
+            $id = $this->db->insert_id();
+            $this->db->trans_complete();
+            $useraddress="";
+             $data2 = array( 
+                'id'=>$id,
+                'fullname'=>$fullname,
+                'socialnumber'=>$socialnumber, 
+                'placesocialnumber'=>$placesocialnumber, 
+                'datenumber'=>$datenumber,
+                'useraddress'=>$useraddress,
+                'useremail'=>$useremail,
+                'userphone'=>$userphone,
+                'createdate'=>date("d-m-Y h:m:s")
+            );
+            $this->db->insert($this->db_userinfo,$data2);
+            $id2 = $this->db->insert_id();
+            $this->db->trans_complete();
+            return $id2;
+        }else{
+            return 0;
+        }
+    }
+
+    public function checkExitUser($username=null){
+        $this->db->where('username',$username);
+        $query = $this->db->get($this->db_user);
+        if($query->num_rows() > 0){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
+
 
 //----------------------------------------------------------------------------------------------------------------------------------
     public function getUserType($userid = null){
@@ -88,16 +134,7 @@ class UserInfo_model extends CI_Model {
         }
     }
 
-    /**
-     * @param   $usertype
-     * @param   $username
-     * @param   $userpass
-     * @param   $useremail
-     * @param   $userphone
-     * @param   $usericon
-     * @param   $usergender
-     * @return int
-     */
+   
     public function insertUser($usertype=null,$username=null,$userpass=null,$useremail=null,$userphone=null,$usericon=null,$usergender=null){
         if($this->checkExitUser($username) == 1){
             $data = array(
@@ -118,19 +155,7 @@ class UserInfo_model extends CI_Model {
         }
     }
 
-    /**
-     * @param  $username
-     * @return int
-     */
-    public function checkExitUser($username=null){
-        $this->db->where('username',$username);
-        $query = $this->db->get('es_user');
-        if($query->num_rows() > 0){
-            return 0;
-        }else{
-            return 1;
-        }
-    }
+  
 
     /**
      * @param   $userid

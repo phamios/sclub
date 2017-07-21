@@ -1,10 +1,13 @@
 <!-- Menu Left -->
 <div id="mySidenav" class="sidenav">
  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a> 
+  <a href="#">Giới thiệu</a>
+  <a href="#">Vay thế chấp</a>
+  <a href="#">Hợp tác đầu tư</a>
+  <a href="#">Kiến thức tài chính</a> 
+  <a href="#">Hội đồng thành viên</a>
+  <a href="#">Thương hiệu</a>
+  <a href="#">Hệ thống và mạng lưới</a>
 </div>
 
 <!-- Login form right -->
@@ -23,7 +26,7 @@
         <p></p>
        <hr/> 
        <h5 style="font-weight: bold;">Bạn chưa có tài khoản ?</h5>
-        <button class="form-control btn btn-primary" name="registersubmit" >Đăng Ký Ngay</button> <br/>
+       <a href="<?php echo site_url('home/register');?>" class="form-control btn btn-primary" name="registersubmit" >Đăng Ký Ngay</a> <br/>
     </div>
 </div>
 
@@ -37,7 +40,7 @@
         <span class="icon-bar"></span>
         </button>
         <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
-        <a href="" ><img src="<?php echo base_url('templates/images/logo.png');?>" width="150px" alt="<?php echo site_url();?>"/></a>
+        <a href="<?php echo site_url();?>" ><img src="<?php echo base_url('templates/images/logo.png');?>" width="150px" alt="<?php echo site_url();?>"/></a>
     </div>
     <div id="navbar" class="navbar-collapse">
         <div class="navbar-right">

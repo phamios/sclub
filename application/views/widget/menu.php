@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h3>Menu</h3>
     <nav role="navigation">
         <ul>
@@ -24,4 +24,4 @@
     <a href="https://twitter.com/ETQAmsterdam" target="_blanc">
         <button class="twitter"><span><i class="fa fa-twitter"></i></span><span class="hover"><i class="fa fa-twitter"></i></span></button>
     </a>
-</footer>
+</footer> -->
