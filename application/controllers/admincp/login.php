@@ -43,7 +43,7 @@ class Login extends CI_Controller
         }
         else
         {
-            redirect('admincp/dashboard');
+            $this->load->view('admin/dashboard');
         }
     }
     
@@ -83,7 +83,7 @@ class Login extends CI_Controller
                                     
                     $this->session->set_userdata($sessionArray);
                     
-                    redirect('admin/dashboard');
+                    redirect('admincp/user');
                 }
             }
             else

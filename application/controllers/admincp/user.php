@@ -27,7 +27,7 @@ class User extends BaseController
         
         $count = $this->user_model->userListingCount('');
         $data['userCount'] = $count;
-        $this->loadViews("dashboard", $this->global, $data , NULL);
+        $this->loadViews("admin/dashboard", $this->global, $data , NULL);
     }
     
     /**

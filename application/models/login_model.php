@@ -1,5 +1,7 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 
+require APPPATH . '/helpers/admin_helper.php';
+
 class Login_model extends CI_Model
 {
     function __construct() {
