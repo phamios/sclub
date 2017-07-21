@@ -11,6 +11,13 @@ class BaseController extends CI_Controller {
 	protected $roleText = '';
 	protected $global = array ();
 	
+	function __construct() {
+        parent::__construct(); 
+        $this->load->helper('url'); 
+		$this->load->library('session'); 
+        $this->load->helper(array('form', 'url')); 
+    }
+
 	/**
 	 * Takes mixed data and optionally a status code, then creates the response
 	 *
@@ -72,9 +79,9 @@ class BaseController extends CI_Controller {
 	function loadThis() {
 		$this->global ['pageTitle'] = 'Sclub : Access Denied';
 		
-		$this->load->view ( 'includes/header', $this->global );
+		$this->load->view ( 'admin/includes/header', $this->global );
 		$this->load->view ( 'access' );
-		$this->load->view ( 'includes/footer' );
+		$this->load->view ( 'admin/includes/footer' );
 	}
 	
 	/**
@@ -96,9 +103,9 @@ class BaseController extends CI_Controller {
      */
     function loadViews($viewName = "", $headerInfo = NULL, $pageInfo = NULL, $footerInfo = NULL){
 
-        $this->load->view('includes/header', $headerInfo);
+        $this->load->view('admin/includes/header', $headerInfo);
         $this->load->view($viewName, $pageInfo);
-        $this->load->view('includes/footer', $footerInfo);
+        $this->load->view('admin/includes/footer', $footerInfo);
     }
 	
 	/**

@@ -2,6 +2,11 @@
 
 class User_model extends CI_Model
 {
+    function __construct() {
+        parent::__construct(); 
+        $this->load->database();
+    }
+
     /**
      * This function is used to get the user listing count
      * @param string $searchText : This is optional search text
