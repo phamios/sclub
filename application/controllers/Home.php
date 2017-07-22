@@ -110,6 +110,40 @@ class Home extends CI_Controller {
         }
     }
 
+    public function add_bank(){
+        if ($this->session->userdata('user_id') == null) {
+            redirect('home/login');
+        }else{
+            $this->load->model('bank_model');
+            $this->load->model('userinfo_model');
+            if (isset($_REQUEST['btnSubmit'])) {
+                $userid = $this->session->userdata('user_id');
+                $bankname = $this->input->post('bankname',true);
+                $bankaddress = $this->input->post('bankaddress',true);
+                $bankaccount = $this->input->post('bankaccount',true);
+                $this->bank_model->insertBank($userid ,$bankname,$bankaddress,$bankaccount);
+                redirect("home/add_bank");
+            }
+
+            $data['allbank'] = $this->bank_model->listBankbyUser($this->session->userdata('user_id'));
+            $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
+            $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $this->load->view('home',$data);
+        }
+    }
+
+    public function remove_bank($bankid = null){
+        if ($this->session->userdata('user_id') == null) {
+            redirect('home/login');
+        }else{
+            $this->load->model('bank_model');
+            $userid= $this->session->userdata('user_id');
+            $this->bank_model->delete($bankid,$userid);
+            redirect('home/add_bank');
+        }
+
+    }
+
     public function logout(){
         $this->session->unset_userdata('user_id');
         $this->session->unset_userdata('user_name');

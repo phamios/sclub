@@ -20,7 +20,7 @@
        <?php echo form_open_multipart('Authen/login', array('role' => "form")); ?>
         <input type="text" value="" class="form-control" name="useremail" id="useremail" placeholder="Email đăng nhập"/>
         <br/>
-        <input type="text" value="" class="form-control" name="userpass" id="userpass" placeholder="Mật khẩu đăng nhập" />
+        <input type="password" value="" class="form-control" name="userpass" id="userpass" placeholder="Mật khẩu đăng nhập" />
     
          <h5 style="margin-left:-30px;color:#bdc3c7"><a href="<?php echo site_url();?>">Bạn quên mật khẩu ?</a></h5>
         <button class="form-control btn btn-primary" name="loginsubmit" >Đăng nhập</button>
@@ -38,7 +38,7 @@
             <p><image src="<?php echo base_url('templates/images/user.png');?>" alt="user"/> </p>
             <p><a href="#" style="font-size:14px;color:#c0392b;"><?php if($fullname):?><?php echo $fullname;?><?php endif;?></a></p>
             <p></p><p></p><p></p>
-            <p><a href="#" style="font-size:14px;color:black;">Quản lý cá nhân</a></p>
+            <p><a href="<?php echo site_url('home/user/');?>" style="font-size:14px;color:black;">Quản lý cá nhân</a></p>
             <p></p>
             <p><a href="#" style="font-size:14px;color:black;">Quản lý khoản đầu tư</a></p>
             <p></p>

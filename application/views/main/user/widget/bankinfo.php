@@ -4,21 +4,68 @@
             <span>
                 <h1 class="panel-title pull-left" style="font-size:30px;"><small>Thông tin tài khoản</small> <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i></h1>
                 <div class="dropdown pull-right">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Cập nhật
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="background-color: #f39c12;border-color: #f39c12;">
+                        Ngân hàng của bạn
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Familly</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#"><i class="fa fa-fw fa-plus" aria-hidden="true"></i> Thêm mới</a></li>
+                        <li><a href="<?php echo site_url('home/add_bank');?>"><i class="fa fa-fw fa-plus" aria-hidden="true"></i> Danh sách</a></li>
+                        <li><a href="<?php echo site_url('home/add_bank');?>"><i class="fa fa-fw fa-plus" aria-hidden="true"></i> Thêm mới</a></li>
                     </ul>
                 </div>
             </span>
             <br><br>
-            <i class="fa fa-tags" aria-hidden="true"></i> <a href="/tags/diaspora" class="tag">#diaspora</a> <a href="/tags/hashtag" class="tag">#hashtag</a> <a href="/tags/caturday" class="tag">#caturday</a>
-           
+<!--            <i class="fa fa-tags" aria-hidden="true"></i>-->
+<!--            <a href="/tags/diaspora" class="tag">#diaspora</a>-->
+<!--            <a href="/tags/hashtag" class="tag">#hashtag</a>-->
+<!--            <a href="/tags/caturday" class="tag">#caturday</a>-->
         </div>
     </div>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <h4 style="color:#c0392b">Thu nhập thường xuyên</h4>
+            <p>&nbsp;</p>
+            <p>Tài khoản chi tiêu</p>
+            <p>Tài khoản học tập</p>
+            <p>Tài khoản hưởng thụ</p>
+            <p>Tài khoản tiết kiệm</p>
+        </div>
+        <div class="col-md-4">
+            <h4 style="color:#c0392b">Thu nhập bất thường</h4>
+            <p>&nbsp;</p>
+            <p>Tài khoản chi tiêu</p>
+            <p>Tài khoản học tập</p>
+            <p>Tài khoản hưởng thụ</p>
+            <p>Tài khoản tiết kiệm</p>
+        </div>
+        <div class="col-md-4">
+            <h4 style="color:#c0392b">Chi bất thường</h4>
+            <p>&nbsp;</p>
+            <p>Tài khoản chi tiêu</p>
+            <p>Tài khoản học tập</p>
+            <p>Tài khoản hưởng thụ</p>
+            <p>Tài khoản tiết kiệm</p>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="col-md-6">
+        <h4 style="color:#c0392b">Giới thiệu bạn bè</h4>
+        Giới thiệu ngay với bạn bè, người thân của bạn sử dụng dịch vụ tại Sclub.Để nhận được ngay 10% lãi suất của khoản giao dịch phát sinh.
+        <br/><br/>
+        <div class="input-group">
+            <div class="form-group  has-feedback">
+                <input type="text" class="form-control" id="inputSuccess5" placeholder="Nhập email bạn bè của bạn tại đây">
+            </div>
+            <span class="input-group-btn">
+            <button class="btn btn-success" style="background-color: #f39c12;border-color: #f39c12;" type="button"> GIỚI THIỆU NGAY</button>
+
+        </span>
+        </div>
+
+
+
+    </div>
 </div>
+
