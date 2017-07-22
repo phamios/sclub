@@ -166,7 +166,7 @@ class User extends BaseController
         {
             if($userId == null)
             {
-                redirect('userListing');
+                redirect('admincp/user/userListing');
             }
             
             $data['status'] = $this->user_model->getUserStatus();
@@ -174,7 +174,7 @@ class User extends BaseController
             
             $this->global['pageTitle'] = 'Sclub : Edit User';
             
-            $this->loadViews("editOld", $this->global, $data, NULL);
+            $this->loadViews("admin/editOld", $this->global, $data, NULL);
         }
     }
     
@@ -237,7 +237,7 @@ class User extends BaseController
                     $this->session->set_flashdata('error', 'User updation failed');
                 }
                 
-                redirect('userListing');
+                redirect('admincp/user/userListing');
             }
         }
     }

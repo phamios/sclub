@@ -48,6 +48,7 @@ class User_model extends CI_Model
                             OR  uinfo.userphone  LIKE '%".$searchText."%')";
             $this->db->where($likeCriteria);
         }
+        $this->db->order_by('BaseTbl.id');
         $this->db->limit($page, $segment);
         $query = $this->db->get();
         

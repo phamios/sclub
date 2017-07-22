@@ -26,7 +26,6 @@ if(!empty($userInfo))
     <section class="content-header">
       <h1>
         <i class="fa fa-users"></i> User Management
-        <small>Add / Edit User</small>
       </h1>
     </section>
     
@@ -41,11 +40,11 @@ if(!empty($userInfo))
                 
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">Enter User Details</h3>
+                        <h3 class="box-title">User Details</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" action="<?php echo base_url() ?>editUser" method="post" id="editUser" role="form">
+                    <form action="<?php echo site_url('admincp/user/editUser'); ?>" method="post" id="editUser" role="form" >
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">                                

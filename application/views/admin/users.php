@@ -3,16 +3,16 @@
     <section class="content-header">
       <h1>
         <i class="fa fa-users"></i> User Management
-        <small>Add, Edit, Delete</small>
+        <!-- <small>Add, Edit, Delete</small> -->
       </h1>
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-xs-12 text-right">
+            <!-- <div class="col-xs-12 text-right">
                 <div class="form-group">
                     <a class="btn btn-primary" href="<?php echo base_url(); ?>addNew"><i class="fa fa-plus"></i> Add New</a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="row">
             <div class="col-xs-12">
@@ -20,7 +20,7 @@
                 <div class="box-header">
                     <h3 class="box-title">Users List</h3>
                     <div class="box-tools">
-                        <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
+                        <form action="<?php echo base_url() ?>admincp/user/userListing" method="POST" id="searchList">
                             <div class="input-group">
                               <input type="text" name="searchText" value="<?php echo $searchText; ?>" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
                               <div class="input-group-btn">
@@ -53,8 +53,8 @@
                       <td><?php echo $record->useremail ?></td>
                       <td><?php echo $record->userphone ?></td>
                       <td class="text-center">
-                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'editOld/'.$record->id; ?>"><i class="fa fa-pencil"></i></a>
-                          <a class="btn btn-sm btn-danger deleteUser" href="#" data-userid="<?php echo $record->id; ?>"><i class="fa fa-trash"></i></a>
+                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'admincp/user/editOld/'.$record->id; ?>"><i class="fa fa-pencil"></i></a>
+                          <!-- <a class="btn btn-sm btn-danger deleteUser" href="#" data-userid="<?php echo $record->id; ?>"><i class="fa fa-trash"></i></a> -->
                       </td>
                     </tr>
                     <?php
