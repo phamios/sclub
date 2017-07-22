@@ -1,11 +1,12 @@
-#mySidenav a{
-    font-size:14px;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 #mySidenav a{
-    font-size:12px;
+    font-size:18px;
 }
+ 
 .sidenav {
-    font-size: 12px;
+    font-size: 18px;
     height: 100%;
     width: 0;
     position: fixed;
@@ -21,7 +22,7 @@
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 18px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -29,7 +30,7 @@
 
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .sidenav .closebtn {

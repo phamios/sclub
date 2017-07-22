@@ -25,6 +25,18 @@ class Authen extends CI_Controller {
         }
     }
 
+    public function verifyaccount(){
+        if(isset($_REQUEST['verifybutton'])){
+            $this->load->model('userinfo_model');
+            $username = $this->input->post('verifyaccountnumber', true);
+            $this->userinfo_model->verifyaccount($username);
+            $userid = $this->userinfo_model->getUserid($username);
+            redirect('home/step2/'.$userid);
+        } else {
+            redirect('authen/login/'.md5(date("y-m-d h:m:s")));
+        }
+    }
+
  
 
 }

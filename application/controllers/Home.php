@@ -24,9 +24,9 @@ class Home extends CI_Controller {
                 $password = $this->input->post('userpass', true);
                 $result = $this->userinfo_model->authentication($username,$password);
                 if($result <> 0) {
-                redirect('home/index');
+                    redirect('home/index');
                 }else{
-                redirect('home/login/'.md5(date("y-m-d h:m:s")));
+                    redirect('home/login/'.md5(date("y-m-d h:m:s")));
                 }
             }
             $data['notify_error'] = "Mật khẩu, Tên đăng nhập không đúng, hoặc tài khoản của bạn chưa được kích hoạt !";
@@ -69,9 +69,9 @@ class Home extends CI_Controller {
 
     public function step2($userid=null){
         if($userid){
-            $data['status']= "Đăng ký tài khoản thành công ! vui lòng làm tiếp bước tiếp theo";
+            $data['status']= 1;
         }else{
-            $data['status'] = "";       
+            $data['status'] = 0;//"Xác thực tài khoản";       
         }
         
         $this->load->view('home',$data);

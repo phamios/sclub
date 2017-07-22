@@ -1,13 +1,14 @@
 <!-- Menu Left -->
 <div id="mySidenav" class="sidenav">
  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Giới thiệu</a>
+ <a href="#">&nbsp;</a>
+ <a href="#">&nbsp;</a>
+ <a href="#">&nbsp;</a>
+  <a href="#">Menu</a>
+  <a href="#">&nbsp;</a>
   <a href="#">Vay thế chấp</a>
-  <a href="#">Hợp tác đầu tư</a>
   <a href="#">Kiến thức tài chính</a> 
-  <a href="#">Hội đồng thành viên</a>
-  <a href="#">Thương hiệu</a>
-  <a href="#">Hệ thống và mạng lưới</a>
+  <a href="#">Về chúng tôi</a>
 </div>
 
 <!-- Login form right -->

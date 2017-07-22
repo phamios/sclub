@@ -40,7 +40,7 @@ class Userinfo_model extends CI_Model {
     public function authentication($username= null,$userpass=null){
         $this->db->where(array(
             'username'=>$username,
-            'username'=>$userpass,
+            'userpass'=>$userpass,
         ));
         $query = $this->db->get($this->db_user);
         if($query->num_rows() > 0){
@@ -102,8 +102,8 @@ class Userinfo_model extends CI_Model {
             );
             $this->db->insert($this->db_userinfo,$data2);
             $id2 = $this->db->insert_id();
-            $this->db->trans_complete();
-            return $id2;
+            $this->db->trans_complete(); 
+            return $this->getUserid($useremail);
         }else{
             return 0;
         }
@@ -117,6 +117,24 @@ class Userinfo_model extends CI_Model {
         }else{
             return 1;
         }
+    }
+
+    public function getUserid($username = null){
+        $this->db->where('username',$username);
+        $query = $this->db->get($this->db_user);
+        if($query->num_rows() > 0){
+             foreach ($query->result() as $value) {
+                return $value->id;
+            }
+        }else{
+            return 0;
+        }
+    }
+
+    public function verifyaccount($username = null){
+        $this->db->where('username',$username);
+        $data = array('status'=>1);
+        $this->db->update($this->db_user,$data);
     }
 
 

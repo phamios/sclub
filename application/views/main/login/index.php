@@ -9,7 +9,7 @@
         <?php echo form_open_multipart('Authen/login', array('role' => "form")); ?>
         <input type="text" value="" class="form-control" name="useremail" id="useremail" placeholder="Email đăng nhập"/>
         <br/>
-        <input type="text" value="" class="form-control" name="userpass" id="userpass" placeholder="Mật khẩu đăng nhập" />
+        <input type="password" value="" class="form-control" name="userpass" id="userpass" placeholder="Mật khẩu đăng nhập" />
         <h5 style="color:#bdc3c7"><a href="<?php echo site_url(); ?>">Bạn quên mật khẩu ?</a></h5>
         <br/>
         <button class="form-control btn btn-primary" name="loginsubmit" >Đăng nhập</button>

@@ -47,8 +47,8 @@
     
  <!-- Footer -->
 
-    <div class="container-fluid" style="background:#000;min-height:20px;width-height:150px; padding-bottom:50px;">
-        <h4 class="col-md-8" style="margin-top:25px;color:#ecf0f1">Chúng tôi giải quyết nhanh vấn đề tài chính và mở ra những cơ hội đầu tư tốt nhất cho bạn</h4> 
+    <div class="container-fluid" style="text-align:center;background:#000;min-height:20px;width-height:150px; padding-bottom:50px;">
+        <h4 class="col-md-12" style="margin-top:25px;color:#ecf0f1">Chúng tôi giải quyết nhanh vấn đề tài chính và mở ra những cơ hội đầu tư tốt nhất cho bạn</h4> 
     </div>
     <div class="container-fluid" style="background:#000;min-height:300px;padding-top:5px;">
          <div class="col-md-3">
