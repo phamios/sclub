@@ -39,9 +39,10 @@ class User_model extends CI_Model
      */
     function userListing($searchText = '', $page, $segment)
     {
-        $this->db->select('BaseTbl.id, uinfo.socialnumber, BaseTbl.username, uinfo.useremail, uinfo.userphone, BaseTbl.userType, BaseTbl.createdate');
+        $this->db->select('BaseTbl.id, uinfo.socialnumber, BaseTbl.username, uinfo.useremail, uinfo.userphone, BaseTbl.userType, BaseTbl.createdate, ust.desc');
         $this->db->from('tbl_user as BaseTbl');
         $this->db->join('tbl_userinfo as uinfo', 'uinfo.id = BaseTbl.id','left');
+        $this->db->join('tbl_user_status_desc as ust', 'ust.statusID = BaseTbl.status','left');
         if(!empty($searchText)) {
             $likeCriteria = "(uinfo.useremail  LIKE '%".$searchText."%'
                             OR  BaseTbl.username  LIKE '%".$searchText."%'
@@ -150,6 +151,12 @@ class User_model extends CI_Model
         return TRUE;
     }
     
+    function updateUserStatus($statusId, $userId) {
+        $this->db->where('id', $userId);
+        $this->db->update('tbl_user', array('status' => $statusId));
+
+        return TRUE;
+    }
     
     
     /**

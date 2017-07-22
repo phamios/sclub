@@ -14,7 +14,7 @@ if(!empty($userInfo))
         $name = $uf->username;
         $email = $uf->useremail;
         $mobile = $uf->userphone;
-        $statusID = $uf->status;
+        $statusId = $uf->status;
     }
 }
 
@@ -50,7 +50,7 @@ if(!empty($userInfo))
                                 <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="fname">Full Name</label>
-                                        <input type="text" class="form-control" id="fname" placeholder="Full Name" name="fname" value="<?php echo $name; ?>" maxlength="128">
+                                        <input type="text" class="form-control" id="fname" placeholder="Full Name" name="fname" value="<?php echo $name; ?>" maxlength="128" readonly>
                                         <input type="hidden" value="<?php echo $userId; ?>" name="userId" id="userId" />    
                                     </div>
                                     
@@ -58,21 +58,7 @@ if(!empty($userInfo))
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="email">Email address</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $email; ?>" maxlength="128">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Password" name="password" maxlength="10">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="cpassword">Confirm Password</label>
-                                        <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password" name="cpassword" maxlength="10">
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $email; ?>" maxlength="128" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -80,13 +66,13 @@ if(!empty($userInfo))
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="mobile">Mobile Number</label>
-                                        <input type="text" class="form-control" id="mobile" placeholder="Mobile Number" name="mobile" value="<?php echo $mobile; ?>" maxlength="10">
+                                        <input type="text" class="form-control" id="mobile" placeholder="Mobile Number" name="mobile" value="<?php echo $mobile; ?>" maxlength="10" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="role">Status</label>
-                                        <select class="form-control" id="status" name="role">
+                                        <label for="status">Status</label>
+                                        <select class="form-control" id="status" name="status">
                                             <option value="0">Select Status</option>
                                             <?php
                                             if(!empty($status))
@@ -106,12 +92,13 @@ if(!empty($userInfo))
                         </div><!-- /.box-body -->
     
                         <div class="box-footer">
-                            <input type="submit" class="btn btn-primary" value="Submit" />
+                            <input type="submit" class="btn btn-primary" value="Submit" name = "btnSubmitForm" />
                             <input type="reset" class="btn btn-default" value="Reset" />
                         </div>
                     </form>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <?php
                     $this->load->helper('form');
@@ -145,4 +132,4 @@ if(!empty($userInfo))
     </section>
 </div>
 
-<script src="<?php echo base_url(); ?>assets/js/editUser.js" type="text/javascript"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/js/editUser.js" type="text/javascript"></script> -->

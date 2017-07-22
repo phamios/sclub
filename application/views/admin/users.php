@@ -38,6 +38,7 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th>Mobile</th>
+                      <th>Status</th>
                       <th class="text-center">Actions</th>
                     </tr>
                     <?php
@@ -52,6 +53,7 @@
                       <td><?php echo $record->username ?></td>
                       <td><?php echo $record->useremail ?></td>
                       <td><?php echo $record->userphone ?></td>
+                      <td><?php echo $record->desc ?></td>
                       <td class="text-center">
                           <a class="btn btn-sm btn-info" href="<?php echo base_url().'admincp/user/editOld/'.$record->id; ?>"><i class="fa fa-pencil"></i></a>
                           <!-- <a class="btn btn-sm btn-danger deleteUser" href="#" data-userid="<?php echo $record->id; ?>"><i class="fa fa-trash"></i></a> -->

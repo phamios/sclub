@@ -15,6 +15,7 @@ class User extends BaseController
     {
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->helper(array('form', 'url'));
         $this->isLoggedIn();   
     }
     
@@ -190,43 +191,19 @@ class User extends BaseController
         }
         else
         {
-            $this->load->library('form_validation');
-            
             $userId = $this->input->post('userId');
-            
-            $this->form_validation->set_rules('fname','Full Name','trim|required|max_length[128]|xss_clean');
-            $this->form_validation->set_rules('email','Email','trim|required|valid_email|xss_clean|max_length[128]');
-            $this->form_validation->set_rules('password','Password','matches[cpassword]|max_length[20]');
-            $this->form_validation->set_rules('cpassword','Confirm Password','matches[password]|max_length[20]');
-            $this->form_validation->set_rules('role','Role','trim|required|numeric');
-            $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]|xss_clean');
-            
-            if($this->form_validation->run() == FALSE)
-            {
-                $this->editOld($userId);
-            }
-            else
-            {
-                $name = ucwords(strtolower($this->input->post('fname')));
-                $email = $this->input->post('email');
-                $password = $this->input->post('password');
-                $statusId = $this->input->post('status');
-                $mobile = $this->input->post('mobile');
+            $name = ucwords(strtolower($this->input->post('fname',true)));
+                $email = $this->input->post('email',true);
+                $statusId = $this->input->post('status',true);
+                $mobile = $this->input->post('mobile',true);
                 
                 $userInfo = array();
                 $userDetails = array();
                 
                 $userDetails = array('useremail'=>$email, 'userphone'=>$mobile);
-                if(empty($password))
-                {
-                    $userInfo = array('status'=>$statusId, 'username'=>$name);
-                }
-                else
-                {
-                    $userInfo = array('status'=>$statusId, 'username'=>$name, 'password'=>getHashedPassword($password));
-                }
+                $userInfo = array('status'=>$statusId, 'username'=>$name);
                 
-                $result = $this->user_model->editUser($userInfo, $userDetails, $userId);
+                $result = $this->user_model->updateUserStatus($statusId, $userId);
                 
                 if($result == true)
                 {
@@ -237,8 +214,7 @@ class User extends BaseController
                     $this->session->set_flashdata('error', 'User updation failed');
                 }
                 
-                redirect('admincp/user/userListing');
-            }
+                redirect('admincp/user/editOld/'.$userId);
         }
     }
 
