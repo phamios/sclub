@@ -35,12 +35,14 @@
     }
     </script>
 
-    
 
+      <script src="<?php echo base_url('templates/profile.js');?>"></script>
+      <link rel="stylesheet" href="<?php echo base_url('templates/profile.css') ?>">
      
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
     <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese');
@@ -63,7 +65,9 @@
             <?php if ($this->router->fetch_method() == "step2"): ?>
                 <?php $this->load->view('main/register/verifyaccount');?> 
             <?php endif; ?>
-            
+            <?php if ($this->router->fetch_method() == "user"): ?>
+                <?php $this->load->view('main/user/index');?>
+            <?php endif; ?>
         <?php endif;?>
         
     </div>

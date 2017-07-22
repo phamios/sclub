@@ -7,4 +7,3 @@ RewriteRule ^(.*)$ index.php/$1 [L,QSA]
 
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?localhost [NC]
 #RewriteRule ^(.*).(php|html|asp|htm) antidos.html [NC]
- 

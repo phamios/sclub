@@ -12,6 +12,7 @@
 </div>
 
 <!-- Login form right -->
+<?php  if ($this->session->userdata('user_id') == null): ?>
  <div id="mySidenavRight" class="sidenavRight">
  <a href="javascript:void(0)" class="closebtn" onclick="closeNavRight()">&times;</a>
   <div class="content_right_menu">
@@ -30,6 +31,23 @@
        <a href="<?php echo site_url('home/register');?>" class="form-control btn btn-primary" name="registersubmit" >Đăng Ký Ngay</a> <br/>
     </div>
 </div>
+<?php else: ?>
+    <div id="mySidenavRight" class="sidenavRight">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavRight()">&times;</a>
+        <div class="content_right_menu">
+            <p><image src="<?php echo base_url('templates/images/user.png');?>" alt="user"/> </p>
+            <p><a href="#" style="font-size:14px;color:#c0392b;"><?php if($fullname):?><?php echo $fullname;?><?php endif;?></a></p>
+            <p></p><p></p><p></p>
+            <p><a href="#" style="font-size:14px;color:black;">Quản lý cá nhân</a></p>
+            <p></p>
+            <p><a href="#" style="font-size:14px;color:black;">Quản lý khoản đầu tư</a></p>
+            <p></p>
+            <p><a href="#" style="font-size:14px;color:black;">Quản lý khoản vay</a></p>
+            <p></p>
+            <p><a href="<?php echo site_url('home/logout');?>" style="color:#e67e22;font-size:14px;">Đăng xuất</a></p>
+        </div>
+    </div>
+<?php endif;?>
 
  <!-- Navbar main -->
 <nav class="navbar navbar-inverse">

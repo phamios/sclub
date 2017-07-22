@@ -32,6 +32,28 @@ class Userinfo_model extends CI_Model {
             return 0;
         }
     }
+
+    public function getDetailsUserInfo($userid = null){
+        $this->db->where('id',$userid);
+        $query = $this->db->get($this->db_userinfo);
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return 0;
+        }
+    }
+
+    public function getFullNae($userid = null){
+        $this->db->where('id',$userid);
+        $query = $this->db->get($this->db_userinfo);
+        if ($query->num_rows() > 0) {
+            foreach($query->result() as $result){
+              return $result->fullname;
+            }
+        } else {
+            return null;
+        }
+    }
     
     /**
     ** Login into system, it will be check the authentication

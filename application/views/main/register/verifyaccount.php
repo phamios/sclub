@@ -32,7 +32,7 @@
         <?php } else { ?>
             <?php $content="Đăng ký tài khoản thành công !"; ?>
             <p><span style="font-size:22px;"><?php echo  $content;?></span></p>
-            <p><a href="#" class="btn btn-success" name="verifybutton">&nbsp;&nbsp; Tiếp tục &nbsp;&nbsp;</a></p>
+            <p><a href="<?php echo site_url('home/user/'.md5(rand(1,999))); ?>" class="btn btn-success" name="verifybutton">&nbsp;&nbsp; Tiếp tục &nbsp;&nbsp;</a></p>
         <?php } ?>
     </div>
     <div class="col-md-3"></div>
