@@ -1,5 +1,3 @@
-<?php echo base_url(); ?>assets/dist/css/AdminLTE.min.css
-
 <!DOCTYPE html>
 <html>
   <head>

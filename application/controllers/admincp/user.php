@@ -57,7 +57,7 @@ class User extends BaseController
             
             $this->global['pageTitle'] = 'Sclub : User Listing';
             
-            $this->loadViews("users", $this->global, $data, NULL);
+            $this->loadViews("admin/users", $this->global, $data, NULL);
         }
     }
 
@@ -272,7 +272,7 @@ class User extends BaseController
     {
         $this->global['pageTitle'] = 'Sclub : Change Password';
         
-        $this->loadViews("changePassword", $this->global, NULL, NULL);
+        $this->loadViews("admin/changePassword", $this->global, NULL, NULL);
     }
     
     
@@ -289,7 +289,7 @@ class User extends BaseController
         
         if($this->form_validation->run() == FALSE)
         {
-            $this->loadChangePass();
+            redirect('admincp/user/loadChangePass');
         }
         else
         {
@@ -301,7 +301,7 @@ class User extends BaseController
             if(empty($resultPas))
             {
                 $this->session->set_flashdata('nomatch', 'Your old password not correct');
-                redirect('loadChangePass');
+                redirect('admincp/user/loadChangePass');
             }
             else
             {
@@ -313,7 +313,7 @@ class User extends BaseController
                 if($result > 0) { $this->session->set_flashdata('success', 'Password updation successful'); }
                 else { $this->session->set_flashdata('error', 'Password updation failed'); }
                 
-                redirect('loadChangePass');
+                redirect('admincp/user/loadChangePass');
             }
         }
     }
@@ -323,6 +323,11 @@ class User extends BaseController
         $this->global['pageTitle'] = 'CodeInsect : 404 - Page Not Found';
         
         $this->loadViews("404", $this->global, NULL, NULL);
+    }
+
+    function logoutme()
+    {
+        $this->logout();
     }
 }
 

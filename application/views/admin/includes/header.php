@@ -56,13 +56,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?php echo base_url(); ?>template/assets/dist/img/avatar.png" class="user-image" alt="User Image"/>
+                  <img src="<?php echo base_url(); ?>templates/assets/dist/img/avatar.png" class="user-image" alt="User Image"/>
                   <span class="hidden-xs"><?php echo $name; ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="<?php echo base_url(); ?>template/assets/dist/img/avatar.png" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url(); ?>templates/assets/dist/img/avatar.png" class="img-circle" alt="User Image" />
                     <p>
                       <?php echo $name; ?>
                       <small><?php echo $role_text; ?></small>
@@ -74,7 +74,7 @@
                       <a href="<?php echo site_url('admincp/user/loadChangePass'); ?>" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change Password</a>
                     </div>
                     <div class="pull-right">
-                      <a href="<?php echo site_url('admincp/user/logout'); ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
+                      <a href="<?php echo site_url('admincp/user/logoutme'); ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -91,11 +91,11 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>dashboard">
+              <a href="<?php echo site_url('admincp/user'); ?>">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span></i>
               </a>
             </li>
-            <li class="treeview">
+            <!-- <li class="treeview">
               <a href="#" >
                 <i class="fa fa-user"></i>
                 <span>Tạo mới Users</span>
@@ -106,30 +106,10 @@
                 <i class="fa fa-ticket"></i>
                 <span>Tạo mới nhà đầu tư</span>
               </a>
-            </li>
-            <?php
-            if($role == ROLE_ADMIN || $role == ROLE_MANAGER)
-            {
-            ?>
-            <!-- <li class="treeview">
-              <a href="#" >
-                <i class="fa fa-thumb-tack"></i>
-                <span>Task Status</span>
-              </a>
             </li> -->
+            
             <li class="treeview">
-              <a href="#" >
-                <i class="fa fa-usd"></i>
-                <span>Quản lý tài sản</span>
-              </a>
-            </li>
-            <?php
-            }
-            if($role == ROLE_ADMIN)
-            {
-            ?>
-            <li class="treeview">
-              <a href="<?php echo base_url(); ?>userListing">
+              <a href="<?php echo base_url(); ?>admincp/user/userListing">
                 <i class="fa fa-users"></i>
                 <span>Quản lý Users</span>
               </a>
@@ -142,9 +122,12 @@
                 <span>Quản lý nhà đầu tư</span>
               </a>
             </li>
-            <?php
-            }
-            ?>
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-usd"></i>
+                <span>Quản lý tài sản</span>
+              </a>
+            </li>
           </ul>
         </section>
         <!-- /.sidebar -->
