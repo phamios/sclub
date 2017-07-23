@@ -115,7 +115,7 @@
               </a>
             </li>
             <li class="treeview">
-              <a href="#" >
+              <a href="<?php echo base_url(); ?>admincp/user/userListing" >
                 <i class="fa fa-btc"></i>
                 <!-- <i class="fa fa-files-o"></i>
                  <span>Báo cáo</span> -->
