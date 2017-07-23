@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5bc5855-d44b-46e4-b475-d7ebfc41df86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/Bank_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/main/user/addbank.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Home.php" afterPath="$PROJECT_DIR$/application/controllers/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/user/index.php" afterPath="$PROJECT_DIR$/application/views/main/user/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/user/widget/bankinfo.php" afterPath="$PROJECT_DIR$/application/views/main/user/widget/bankinfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/widget/header.php" afterPath="$PROJECT_DIR$/application/views/widget/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/style_rebase.css" afterPath="$PROJECT_DIR$/templates/style_rebase.css" />
     </list>
     <ignored path="sclub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -166,7 +158,6 @@
         <option value="$PROJECT_DIR$/templates/profile.css" />
         <option value="$PROJECT_DIR$/application/models/Userinfo_model.php" />
         <option value="$PROJECT_DIR$/application/views/main/user/widget/info.php" />
-        <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/views/admin/editOld.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/views/main/user/index.php" />
@@ -176,6 +167,7 @@
         <option value="$PROJECT_DIR$/application/views/widget/header.php" />
         <option value="$PROJECT_DIR$/templates/style_rebase.css" />
         <option value="$PROJECT_DIR$/application/views/main/user/widget/bankinfo.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
       </list>
     </option>
   </component>
@@ -432,6 +424,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sclub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sclub" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -536,12 +546,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500090881822</updated>
-      <workItem from="1500736179954" duration="12912000" />
+      <workItem from="1500736179954" duration="13987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12912000" />
+    <option name="totallyTimeSpent" value="13987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="742" extended-state="6" />
@@ -687,14 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/editOld.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1405">
@@ -785,6 +787,14 @@
             <element signature="e#812#818#1#HTML" expanded="true" />
             <element signature="e#838#844#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
