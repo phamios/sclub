@@ -166,6 +166,19 @@ class Home extends CI_Controller {
         }
     }
 
+    public function create_a_rent(){
+        if ($this->session->userdata('user_id') == null) {
+            redirect('home/login');
+        }else{
+            $this->load->model('userinfo_model');
+            $this->load->model('itemcategory_model');
+            $data['listallCateItem'] = $this->itemcategory_model->listAllCateItem();
+            $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
+            $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $this->load->view('home',$data);
+        }
+    }
+
     public function logout(){
         $this->session->unset_userdata('user_id');
         $this->session->unset_userdata('user_name');

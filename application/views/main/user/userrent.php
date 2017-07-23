@@ -1,6 +1,15 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding:20px;">
     <div class="panel panel-default">
         <div class="panel-body">
+             <span>
+                <h1 class="panel-title pull-left" style="font-size:30px;"><small>Thông tin tài khoản</small> <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i></h1>
+                <div class="dropdown pull-right">
+                    <a class="btn btn-success" href="<?php echo site_url('home/create_a_rent');?>"   id="dropdownMenu1"   style="background-color: #f39c12;border-color: #f39c12;">
+                        Tạo khoản vay mới
+                    </a>
+                </div>
+            </span>
+            <br><br>
             <div class="row">
                 <div class="col-md-6">
                     <h5>CÁC KHOẢN VAY CỦA BẠN</h5>
