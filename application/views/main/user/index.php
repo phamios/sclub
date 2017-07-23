@@ -8,5 +8,8 @@
             <?php if ($this->router->fetch_method() == "add_bank"): ?>
                 <?php $this->load->view('main/user/addbank');?>
             <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "investor"): ?>
+                <?php $this->load->view('main/user/investor');?>
+            <?php endif; ?>
         <?php endif;?>
     </div>

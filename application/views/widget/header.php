@@ -40,7 +40,7 @@
             <p></p><p></p><p></p>
             <p><a href="<?php echo site_url('home/user/');?>" style="font-size:14px;color:black;">Quản lý cá nhân</a></p>
             <p></p>
-            <p><a href="#" style="font-size:14px;color:black;">Quản lý khoản đầu tư</a></p>
+            <p><a href="<?php echo site_url('home/investor');?>" style="font-size:14px;color:black;">Quản lý khoản đầu tư</a></p>
             <p></p>
             <p><a href="#" style="font-size:14px;color:black;">Quản lý khoản vay</a></p>
             <p></p>
