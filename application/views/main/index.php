@@ -8,8 +8,8 @@
                 <p>Tất cả các loại tài sản đều có giá trị chuyển đổi ngang hàng. 
                     Sclub cung cấp cho các bạn dịch vụ thế chấp tài sản ngang hàng và giải pháp đầu tư thông minh tiện lợi.</p>
                 <p>
-                    <a href="#"><img class="thumbnail img-responsive" style="display:inherit;" width="40%" src="<?php echo base_url('templates/images/1.png');?>" alt="Bạn muốn vay tiền"/></a>
-                    <a href="#"><img class="thumbnail img-responsive" style="display:inherit;" width="40%" src="<?php echo base_url('templates/images/3.png');?>" alt="Bạn muốn đầu tư"/></a>
+                    <a href="<?php echo site_url('home/register');?>"><img class="thumbnail img-responsive" style="display:inherit;" width="40%" src="<?php echo base_url('templates/images/1.png');?>" alt="Bạn muốn vay tiền"/></a>
+                    <a href="<?php echo site_url();?>"><img class="thumbnail img-responsive" style="display:inherit;" width="40%" src="<?php echo base_url('templates/images/3.png');?>" alt="Bạn muốn đầu tư"/></a>
                 </p>
                 </div>
             </div>

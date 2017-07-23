@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5bc5855-d44b-46e4-b475-d7ebfc41df86" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/index.php" afterPath="$PROJECT_DIR$/application/views/main/index.php" />
     </list>
     <ignored path="sclub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bankinfo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bankinfo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/main/user/widget/bankinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="180" lean-forward="false" selection-start-line="6" selection-start-column="180" selection-end-line="6" selection-end-column="180" />
+            <state relative-caret-position="80">
+              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -71,6 +70,18 @@
                 <element signature="e#2234#2240#1#HTML" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#1;n#p#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,6 +179,7 @@
         <option value="$PROJECT_DIR$/templates/style_rebase.css" />
         <option value="$PROJECT_DIR$/application/views/main/user/widget/bankinfo.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/views/main/index.php" />
       </list>
     </option>
   </component>
@@ -546,12 +558,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500090881822</updated>
-      <workItem from="1500736179954" duration="13987000" />
+      <workItem from="1500736179954" duration="14453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13987000" />
+    <option name="totallyTimeSpent" value="14453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="742" extended-state="6" />
@@ -800,8 +812,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/user/widget/bankinfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="180" lean-forward="false" selection-start-line="6" selection-start-column="180" selection-end-line="6" selection-end-column="180" />
+        <state relative-caret-position="80">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -813,6 +825,16 @@
             <element signature="e#2234#2240#1#HTML" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#1;n#p#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
