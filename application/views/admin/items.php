@@ -42,6 +42,7 @@
                       <th>User</th>
                       <th>Mục đích vay</th>
                       <th>Loại tài sản</th>
+                      <th class="text-center">Actions</th>
                     </tr>
                     <?php
                     if(!empty($userRecords))
@@ -59,6 +60,13 @@
                       <td><?php echo $record->username ?></td>
                       <td><?php echo $record->rentpurpose ?></td>
                       <td><?php echo $record->itemcategoryname ?></td>
+                      <td class="text-center">
+                          <form action="<?php echo base_url().'admincp/user/updateItem/'.$record->itemid; ?>" method="post" id="updateItem" role="form" >
+                            <div class="box-footer">
+                                <input type="submit" class="btn btn-primary" value="Update" name = "btnSubmitForm" />
+                            </div>
+                          </form>
+                      </td>
                     </tr>
                     <?php
                         }
