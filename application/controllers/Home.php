@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
+    var $upload_dir = "./files/products/";
+
     function __construct() {
         parent::__construct();
         $this->load->library('session');
@@ -160,6 +162,12 @@ class Home extends CI_Controller {
             redirect('home/login');
         }else{
             $this->load->model('userinfo_model');
+            $this->load->model('userrent_model');
+            $this->load->model('itemcategory_model');
+
+            $userid = $this->session->userdata('user_id');
+            $data['listAllCateItem'] = $this->itemcategory_model->listAllCateItem();
+            $data['listAllRent'] = $this->userrent_model->listAllRent($userid);
             $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
             $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
             $this->load->view('home',$data);
@@ -170,6 +178,21 @@ class Home extends CI_Controller {
         if ($this->session->userdata('user_id') == null) {
             redirect('home/login');
         }else{
+            if(isset($_REQUEST['btnSubmit'])){
+                $userid = $this->session->userdata('user_id');
+                $itemcategoryid = $this->input->post('itemcategoryid',true);
+                $itemdesc = $this->input->post('itemdesc',true);
+                $rentpurpose = $this->input->post('rentpurpose',true);
+                $rentamount = $this->input->post('rentamount',true);
+                $itemimages = $this->do_upload_image($this->upload_dir,'itemimage');
+                $this->load->model('userrent_model');
+                $result  = $this->userrent_model->insertRent($userid,$itemcategoryid,$rentpurpose,$itemdesc,$rentamount,$itemimages);
+                if($result){
+                    redirect('home/userrent');
+                }else{
+                    redirect('home/create_a_rent');
+                }
+            }
             $this->load->model('userinfo_model');
             $this->load->model('itemcategory_model');
             $data['listallCateItem'] = $this->itemcategory_model->listAllCateItem();
@@ -185,5 +208,43 @@ class Home extends CI_Controller {
         redirect('home/login');
     }
 
+
+   /**
+    * =============Xử lý upload ảnh
+    */
+    function do_upload_image($mypath, $filename) {
+        $config['upload_path'] = $mypath;
+        $config['allowed_types'] = 'gif|jpg|png|bmp';
+        $config['max_size'] = '800000';
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        if (isset($filename)) {
+            if (!$this->upload->do_upload($filename)) {
+                $error = array('error' => $this->upload->display_errors());
+                echo $error['error']; die;
+                return NULL;
+            } else {
+                $data = array('upload_data' => $this->upload->data());
+                $imagename = $this->upload->file_name;
+                $this->resize_image($mypath, 'thumb_' . $imagename, $imagename);
+                return $imagename;
+            }
+        } else {
+            echo $this->upload->display_errors();
+        }
+    }
+
+
+    public function resize_image($dir, $new_name, $image) {
+        $img_cfg_thumb['image_library'] = 'gd2';
+        $img_cfg_thumb['source_image'] = "./" . $dir . "/" . $image;
+        $img_cfg_thumb['maintain_ratio'] = TRUE;
+        $img_cfg_thumb['new_image'] = $new_name;
+        $img_cfg_thumb['width'] = 300;
+        $img_cfg_thumb['height'] = 200;
+        $this->load->library('image_lib');
+        $this->image_lib->initialize($img_cfg_thumb);
+        $this->image_lib->resize();
+    }
 
 }

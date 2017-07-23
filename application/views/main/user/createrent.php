@@ -1,3 +1,4 @@
+<?php echo form_open_multipart('/home/create_a_rent', array('role' => "form")); ?>
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <hr/>
     <div class="row">
@@ -45,7 +46,7 @@
         </div>
         <div class="col-md-6">
             <h4>Mô tả sản phẩm:</h4>
-            <textarea class="form-control" placeholder="Nội dung, mô tả sản phẩm của bạn cần thế chấp."></textarea>
+            <textarea class="form-control" name="itemdesc" placeholder="Nội dung, mô tả sản phẩm của bạn cần thế chấp."></textarea>
             <br/>
             Ảnh ản phẩm:
             <input type="file" class="form-control" value="" name="itemimage"/>
@@ -66,4 +67,4 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-
+<?php echo form_close(); ?>

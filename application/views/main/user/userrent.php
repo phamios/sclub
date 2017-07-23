@@ -19,42 +19,50 @@
             </div>
 
             <!--            Danh sách các khoản đầu tư -->
+            <?php if($listAllRent <> null):?>
             <hr/>
-            <div class="row">
+                <?php foreach($listAllRent as $rent):?>
+            <div class="row" style="padding-bottom: 20px;">
                 <div class="col-md-4">
-                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản vay: 9.000.000 <br/>
-                    Lĩnh vực đầu tư: <span style="color:#e67e22">Đầu tư dự án</span><br/>
-                    Tình trạng:  <span style="color:#e67e22">Chờ</span><br/>
+                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản vay: <?php echo number_format($rent->itemprice)?> vnđ  <br/>
+                    Loại sản phẩm vay: <span style="color:#e67e22">
+                            <?php if($listAllCateItem <> null):?>
+                            <?php foreach($listAllCateItem as $cateitem):?>
+                                        <?php if($cateitem->id == $rent->categoryid):?>
+                                            <?php echo $cateitem->categoryname;?>
+                                        <?php endif;?>
+                                    <?php endforeach;?>
+                        <?php endif;?>
+                        </span><br/>
+                    Tình trạng:  <span style="color:#e67e22">
+                        <?php if($rent->status == 1):?>
+                                Đã thanh toán
+                        <?php else:?>
+                                Đang phê duyệt
+                        <?php endif;?>
+                    </span><br/>
                 </div>
                 <div class="col-md-8" style="float:right;" style="background-color: #e67e22;color:white; line-height: 2px;">
                     <div class="panel panel-warning">
                     </div>
-                    <small class="pull-right">Thời gian đầu tư 15 tháng</small>
+                    <small class="pull-right">Thời gian vay đến: <?php echo $rent->itemvalidate;?></small>
                 </div>
 
             </div>
+                    <?php endforeach;?>
+                <?php else:?>
 
+                <p>
+                Hiện tại bạn chưa có khoản vay nào !
+                </p>
+            <?php endif;?>
 
-            <hr/>
-            <div class="row">
-                <div class="col-md-4">
-                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản vay: 10.000.000 <br/>
-                    Lĩnh vực đầu tư: <span style="color:#e67e22">Cho vay thế chấp</span><br/>
-                    Tình trạng:  <span style="color:#e67e22">Đang tiến hành</span><br/>
-                </div>
-                <div class="col-md-8" style="float:right;" style="background-color: #e67e22;color:white; line-height: 2px;">
-                    <div class="panel panel-warning">
-                    </div>
-                    <small class="pull-right">Thời gian đầu tư 24 tháng</small>
-                </div>
-
-            </div>
 
             <br><br>
 
-            <a href="/tags/diaspora" class="tag">#diaspora</a>
-            <a href="/tags/hashtag" class="tag">#hashtag</a>
-            <a href="/tags/caturday" class="tag">#caturday</a>
+<!--            <a href="/tags/diaspora" class="tag">#diaspora</a>-->
+<!--            <a href="/tags/hashtag" class="tag">#hashtag</a>-->
+<!--            <a href="/tags/caturday" class="tag">#caturday</a>-->
         </div>
     </div>
 </div>
