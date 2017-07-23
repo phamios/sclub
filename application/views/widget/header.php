@@ -42,7 +42,7 @@
             <p></p>
             <p><a href="<?php echo site_url('home/investor');?>" style="font-size:14px;color:black;">Quản lý khoản đầu tư</a></p>
             <p></p>
-            <p><a href="#" style="font-size:14px;color:black;">Quản lý khoản vay</a></p>
+            <p><a href="<?php echo site_url('home/userrent');?>" style="font-size:14px;color:black;">Quản lý khoản vay</a></p>
             <p></p>
             <p><a href="<?php echo site_url('home/logout');?>" style="color:#e67e22;font-size:14px;">Đăng xuất</a></p>
         </div>

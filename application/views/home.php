@@ -74,6 +74,10 @@
             <?php if ($this->router->fetch_method() == "investor"): ?>
                 <?php $this->load->view('main/user/index');?>
             <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "userrent"): ?>
+                <?php $this->load->view('main/user/index');?>
+            <?php endif; ?>
+
         <?php endif;?>
         
     </div>

@@ -11,5 +11,8 @@
             <?php if ($this->router->fetch_method() == "investor"): ?>
                 <?php $this->load->view('main/user/investor');?>
             <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "userrent"): ?>
+                <?php $this->load->view('main/user/userrent');?>
+            <?php endif; ?>
         <?php endif;?>
     </div>
