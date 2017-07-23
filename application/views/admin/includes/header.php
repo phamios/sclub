@@ -39,7 +39,7 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="<?php echo base_url(); ?>" class="logo">
+        <a href="<?php echo site_url('admincp/login'); ?>" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>S</b>club</span>
           <!-- logo for regular state and mobile devices -->
@@ -125,7 +125,14 @@
             <li class="treeview">
               <a href="#" >
                 <i class="fa fa-usd"></i>
-                <span>Quản lý tài sản</span>
+                <span>Quản lý khoản vay</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-usd"></i>
+                <span>Quản lý content</span>
               </a>
             </li>
           </ul>

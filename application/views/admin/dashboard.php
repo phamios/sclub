@@ -41,7 +41,7 @@
               <div class="small-box bg-green">
                 <div class="inner">
                   <h3>0<sup style="font-size: 20px"></sup></h3>
-                  <p>Hợp đồng</p>
+                  <p>Khoản vay</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
@@ -55,7 +55,7 @@
               <div class="small-box bg-red">
                 <div class="inner">
                   <h3>0</h3>
-                  <p>Hợp đồng chờ thẩm định</p>
+                  <p>Khoản vay chờ thẩm định</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-pie-graph"></i>
