@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5bc5855-d44b-46e4-b475-d7ebfc41df86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/main/user/investor.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Home.php" afterPath="$PROJECT_DIR$/application/controllers/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/user/index.php" afterPath="$PROJECT_DIR$/application/views/main/user/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/widget/header.php" afterPath="$PROJECT_DIR$/application/views/widget/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/user/investor.php" afterPath="$PROJECT_DIR$/application/views/main/user/investor.php" />
     </list>
     <ignored path="sclub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,33 +40,38 @@
       <file leaf-file-name="Home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+            <state relative-caret-position="-1926">
+              <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="investor.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="investor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/main/user/investor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="465">
+              <caret line="31" column="66" lean-forward="false" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#786#792#1#HTML" expanded="true" />
-                <element signature="e#812#818#1#HTML" expanded="true" />
-                <element signature="e#838#844#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/widget/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="42" column="58" lean-forward="false" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+            <state relative-caret-position="295">
+              <caret line="60" column="83" lean-forward="false" selection-start-line="60" selection-start-column="83" selection-end-line="60" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -167,13 +170,14 @@
         <option value="$PROJECT_DIR$/application/models/Bank_model.php" />
         <option value="$PROJECT_DIR$/templates/style_rebase.css" />
         <option value="$PROJECT_DIR$/application/views/main/user/widget/bankinfo.php" />
-        <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/views/main/index.php" />
         <option value="$PROJECT_DIR$/application/views/main/user/widget/investor.php" />
         <option value="$PROJECT_DIR$/application/views/main/user/index.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/views/widget/header.php" />
         <option value="$PROJECT_DIR$/application/controllers/Home.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/views/main/user/investor.php" />
       </list>
     </option>
   </component>
@@ -555,12 +559,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500090881822</updated>
-      <workItem from="1500736179954" duration="14825000" />
+      <workItem from="1500736179954" duration="16309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14825000" />
+    <option name="totallyTimeSpent" value="16309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="742" extended-state="6" />
@@ -746,14 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/user/addbank.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -812,27 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/user/investor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#786#792#1#HTML" expanded="true" />
-            <element signature="e#812#818#1#HTML" expanded="true" />
-            <element signature="e#838#844#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -843,9 +818,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/widget/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="42" column="58" lean-forward="false" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+        <state relative-caret-position="295">
+          <caret line="60" column="83" lean-forward="false" selection-start-line="60" selection-start-column="83" selection-end-line="60" selection-end-column="83" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1926">
+          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/user/investor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="66" lean-forward="false" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

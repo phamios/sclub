@@ -148,7 +148,7 @@ class Home extends CI_Controller {
         if ($this->session->userdata('user_id') == null) {
             redirect('home/login');
         }else{
-            $data['allbank'] = $this->bank_model->listBankbyUser($this->session->userdata('user_id'));
+            $this->load->model('userinfo_model');
             $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
             $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
             $this->load->view('home',$data);
