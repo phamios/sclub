@@ -56,6 +56,82 @@ class User_model extends CI_Model
         $result = $query->result();        
         return $result;
     }
+
+    /**
+     * Function Get User Item list
+    **/
+    function itemListing($searchText = '', $page, $segment)
+    {
+        $this->db->select('ui.id itemid, ui.itemname, ui.itemdescription, ui.itemprice, ui.itemimages,
+		ui.itemvalidate, ui.createdate itemcreatedate, ui.modifydate itemmodifydate, 
+        ui.status itemstatus, us.id userid, us.username, 
+        ui.rentpurpose,
+        ic.id itemcategoryid, ic.categoryname itemcategoryname');
+        $this->db->from('tbl_useritem as ui');
+        $this->db->join('tbl_user as us', 'us.id = ui.userid','left');
+        $this->db->join('tbl_itemcategory as ic', 'ic.id = ui.categoryid','left');
+
+        if(!empty($searchText)) {
+            $likeCriteria = "(ui.id  LIKE '%".$searchText."%'
+                            OR  ui.itemname  LIKE '%".$searchText."%'
+                            OR  ui.status  LIKE '%".$searchText."%'
+                            OR  us.username  LIKE '%".$searchText."%'
+                            OR  ui.rentpurpose  LIKE '%".$searchText."%'
+                            OR  ic.categoryname  LIKE '%".$searchText."%'
+                            OR  ui.itemdescription  LIKE '%".$searchText."%')";
+            $this->db->where($likeCriteria);
+        }
+
+        $this->db->order_by('ui.createdate desc');
+        $this->db->limit($page, $segment);
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+    function itemCount($searchText = '')
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_useritem as ui');
+
+        if(!empty($searchText)) {
+            $likeCriteria = "(ui.id  LIKE '%".$searchText."%'
+                            OR  ui.itemname  LIKE '%".$searchText."%'
+                            OR  ui.status  LIKE '%".$searchText."%'
+                            OR  us.username  LIKE '%".$searchText."%'
+                            OR  ui.rentpurpose  LIKE '%".$searchText."%'
+                            OR  ic.categoryname  LIKE '%".$searchText."%'
+                            OR  ui.itemdescription  LIKE '%".$searchText."%')";
+            $this->db->where($likeCriteria);
+        }
+
+        $query = $this->db->get();
+        
+        return count($query->result());
+    }
+
+    function pendingItemCount($searchText = '')
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_useritem as ui');
+        $this->db->where('ui.status = 0 ');
+
+        if(!empty($searchText)) {
+            $likeCriteria = "and (ui.id  LIKE '%".$searchText."%'
+                            OR  ui.itemname  LIKE '%".$searchText."%'
+                            OR  ui.status  LIKE '%".$searchText."%'
+                            OR  us.username  LIKE '%".$searchText."%'
+                            OR  ui.rentpurpose  LIKE '%".$searchText."%'
+                            OR  ic.categoryname  LIKE '%".$searchText."%'
+                            OR  ui.itemdescription  LIKE '%".$searchText."%')";
+            $this->db->where($likeCriteria);
+        }
+
+        $query = $this->db->get();
+        
+        return count($query->result());
+    }
     
     /**
      * This function is used to get the user roles information

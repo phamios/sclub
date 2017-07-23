@@ -115,7 +115,7 @@
               </a>
             </li>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>admincp/user/userListing" >
+              <a href="#" >
                 <i class="fa fa-btc"></i>
                 <!-- <i class="fa fa-files-o"></i>
                  <span>Báo cáo</span> -->
@@ -123,16 +123,9 @@
               </a>
             </li>
             <li class="treeview">
-              <a href="#" >
+              <a href="<?php echo base_url(); ?>admincp/user/itemListing" >
                 <i class="fa fa-usd"></i>
                 <span>Quản lý khoản vay</span>
-              </a>
-            </li>
-
-            <li class="treeview">
-              <a href="#" >
-                <i class="fa fa-usd"></i>
-                <span>Quản lý content</span>
               </a>
             </li>
           </ul>

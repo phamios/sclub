@@ -28,6 +28,11 @@ class User extends BaseController
         
         $count = $this->user_model->userListingCount('');
         $data['userCount'] = $count;
+        $itemCount = $this->user_model->itemCount('');
+        $data['itemCount'] = $itemCount;
+        $pendingItemCount = $this->user_model->pendingItemCount('');
+        $data['pendingItemCount'] = $pendingItemCount;
+
         $this->loadViews("admin/dashboard", $this->global, $data , NULL);
     }
     
@@ -59,6 +64,34 @@ class User extends BaseController
             $this->global['pageTitle'] = 'Sclub : User Listing';
             
             $this->loadViews("admin/users", $this->global, $data, NULL);
+        }
+    }
+
+    function itemListing()
+    {
+        if($this->isAdmin() == TRUE)
+        {
+            $this->loadThis();
+        }
+        else
+        {
+            $this->load->model('user_model');
+        
+            $searchText = $this->input->post('searchText');
+            $data['searchText'] = $searchText;
+            
+            $this->load->library('pagination');
+            
+            $count = $this->user_model->itemCount($searchText);
+
+			$returns = $this->paginationCompress ( "itemListing/", $count, 5 );
+            
+            $data['userRecords'] = $this->user_model->itemListing($searchText, $returns["page"], $returns["segment"]);
+            //$data['userCount'] = $count;
+            
+            $this->global['pageTitle'] = 'Sclub : Item Listing';
+            
+            $this->loadViews("admin/items", $this->global, $data, NULL);
         }
     }
 

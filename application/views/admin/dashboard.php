@@ -40,13 +40,13 @@
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>0<sup style="font-size: 20px"></sup></h3>
+                  <h3><?php echo $itemCount ?></h3>
                   <p>Khoản vay</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?php echo base_url(); ?>admincp/user/itemListing" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
             
@@ -54,13 +54,13 @@
               <!-- small box -->
               <div class="small-box bg-red">
                 <div class="inner">
-                  <h3>0</h3>
+                  <h3><?php echo $pendingItemCount ?></h3>
                   <p>Khoản vay chờ thẩm định</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?php echo base_url(); ?>admincp/user/itemListing" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
           </div>
