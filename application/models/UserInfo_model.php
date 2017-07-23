@@ -43,6 +43,18 @@ class Userinfo_model extends CI_Model {
         }
     }
 
+    public function getUserEmail($userid = null){
+        $this->db->where('id',$userid);
+        $query = $this->db->get($this->db_userinfo);
+        if ($query->num_rows() > 0) {
+            foreach($query->result() as $result){
+                return $result->useremail;
+            }
+        } else {
+            return null;
+        }
+    }
+
     public function getFullNae($userid = null){
         $this->db->where('id',$userid);
         $query = $this->db->get($this->db_userinfo);

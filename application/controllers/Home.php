@@ -188,16 +188,33 @@ class Home extends CI_Controller {
                 $this->load->model('userrent_model');
                 $result  = $this->userrent_model->insertRent($userid,$itemcategoryid,$rentpurpose,$itemdesc,$rentamount,$itemimages);
                 if($result){
-                    redirect('home/userrent');
+                    redirect('home/userrentsuccess');
                 }else{
                     redirect('home/create_a_rent');
                 }
+            }
+            if(isset($_REQUEST['btnCancel'])){
+                redirect('home/user');
             }
             $this->load->model('userinfo_model');
             $this->load->model('itemcategory_model');
             $data['listallCateItem'] = $this->itemcategory_model->listAllCateItem();
             $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
             $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $this->load->view('home',$data);
+        }
+    }
+
+    public function userrentsuccess(){
+        if ($this->session->userdata('user_id') == null) {
+            redirect('home/login');
+        }else{
+            $this->load->model('userinfo_model');
+            $this->load->model('itemcategory_model');
+            $data['listallCateItem'] = $this->itemcategory_model->listAllCateItem();
+            $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
+            $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $data['email'] = $this->userinfo_model->getUserEmail($this->session->userdata('user_id'));
             $this->load->view('home',$data);
         }
     }

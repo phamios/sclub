@@ -16,12 +16,55 @@
         </div>
         <div class="col-md-8">
             Số tiền cần vay:
-            <input type="text" class="form-control" name="rentamount" placeholder=" ví dụ 10000000" name="rentamount" style="display: inline;width:200px;"/> VNĐ
+            <input type="text" id="formattedNumberField" class="form-control" name="rentamount" placeholder=" ví dụ 10000000" name="rentamount" style="display: inline;width:200px;"/> VNĐ
+
+            <script type="text/javascript">
+                var fnf = document.getElementById("formattedNumberField");
+                fnf.addEventListener('keyup', function(evt){
+                    var n = parseInt(this.value.replace(/\D/g,''),10);
+                    fnf.value = n.toLocaleString();
+                }, false);
+                </script>
+
+
         </div>
         <div class="col-md-2">
             &nbsp;
         </div>
         </center>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">Thời gian vay ( ngày ) </div>
+        <div class="col-md-4">Lãi uất</div>
+        <div class="col-md-4">Tiền gốc và lãi</div>
+    </div>
+    <div class="row" style="padding-right:20px;">
+        <script>
+            document.getElementById("formattedNumberField").addEventListener("change", myFunction);
+
+            function myFunction() {
+                var amount = document.getElementById('formattedNumberField').value;
+                var result = parseInt(amount.replace(",", ""));
+                var day_amount = $("#day_amount");
+                day_amount[0].firstChild.nodeValue = result/1000 ;
+                var rate_amount = $("#rate_amount");
+                if(result < 10000000){
+                    rate_amount[0].firstChild.nodeValue = "20%";
+                } else if(result > 100000000){
+                    rate_amount[0].firstChild.nodeValue = "15%";
+                } else {
+                    rate_amount[0].firstChild.nodeValue = "10%";
+                }
+                var pay_amount = $("#pay_amount");
+                var percent = $("#rate_amount").text().replace("%", "");
+                pay_amount[0].firstChild.nodeValue = (percent*amount)/100;
+
+            }
+        </script>
+        <div class="col-md-4" style="background-color: #bdc3c7" id="day_amount">0</div>
+        <div class="col-md-4" style="background-color: #ecf0f1" id="rate_amount">0</div>
+        <div class="col-md-4" style="background-color: #ecf0f1;" id="pay_amount">10.000.000</div>
     </div>
     <hr/>
     <div class="row">

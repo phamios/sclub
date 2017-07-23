@@ -24,7 +24,7 @@
                 <?php foreach($listAllRent as $rent):?>
             <div class="row" style="padding-bottom: 20px;">
                 <div class="col-md-4">
-                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản vay: <?php echo number_format($rent->itemprice)?> vnđ  <br/>
+                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản vay: <?php echo number_format($rent->itemprice)?> <br/>
                     Loại sản phẩm vay: <span style="color:#e67e22">
                             <?php if($listAllCateItem <> null):?>
                             <?php foreach($listAllCateItem as $cateitem):?>

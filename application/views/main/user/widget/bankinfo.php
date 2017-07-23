@@ -4,14 +4,11 @@
             <span>
                 <h1 class="panel-title pull-left" style="font-size:30px;"><small>Thông tin tài khoản</small> <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i></h1>
                 <div class="dropdown pull-right">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="background-color: #f39c12;border-color: #f39c12;">
-                        Ngân hàng của bạn
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="<?php echo site_url('home/add_bank');?>"><i class="fa fa-fw fa-plus" aria-hidden="true"></i> Danh sách</a></li>
-                        <li><a href="<?php echo site_url('home/add_bank');?>"><i class="fa fa-fw fa-plus" aria-hidden="true"></i> Thêm mới</a></li>
-                    </ul>
+                    <a href="<?php echo site_url('home/userrent');?>"><i class="fa fa-id-badge" aria-hidden="true"></i> Khoản vay</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="<?php echo site_url('home/add_bank');?>"><i class="fa fa-university" aria-hidden="true"></i> Tài khoản ngân hàng</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="<?php echo site_url('home/logout');?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Thoát</a>
                 </div>
             </span>
             <br><br>

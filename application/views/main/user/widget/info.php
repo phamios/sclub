@@ -11,7 +11,7 @@
             <div class="media">
                 <div align="center">
                     <img class="thumbnail img-responsive" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="100px" height="100px">
-                    <p><a href="#" style="font-size:14px;color:#c0392b;"><?php if($fullname):?><?php echo $fullname;?><?php endif;?></a></p>
+                    <p><a href="<?php echo site_url('home/user')?>" style="font-size:14px;color:#c0392b;"><?php if($fullname):?><?php echo $fullname;?><?php endif;?></a></p>
                 </div>
                 <div class="media-body">
                     <hr>

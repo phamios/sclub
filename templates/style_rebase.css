@@ -86,10 +86,10 @@ body {
 }
 #navbar{
     color:white;
-    margin-top:5px;
+    /*margin-top:5px;*/
 }
  .navbar{
-     margin-bottom: 5px;
+     margin-bottom: 0px;
  }
 
 @media screen and (max-height: 450px) {
@@ -100,7 +100,7 @@ body {
 @media screen and (min-width: 768px) {
     .jumbotron { 
         padding-top: 48px;
-        padding-bottom: 0px; 
+        padding-bottom: 0px;
     }
 }
  .jumbotron { 
@@ -135,6 +135,15 @@ body {
 }
 footer{
     padding-left:20px;
+}
+
+@media (min-width: 1100px){
+    .col-lg-9 {
+        width: 70%;
+    }
+}
+.col-lg-9 col-md-9 col-sm-12 col-xs-12{
+    width: 70%;
 }
 
 /* #nextsessionhome{
@@ -914,3 +923,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
     background-color: rgb(57, 179, 215);
     border-color: rgb(38, 154, 188);
 }
+
+
+
+
+

@@ -61,6 +61,7 @@
         <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
         <a href="<?php echo site_url();?>" ><img src="<?php echo base_url('templates/images/logo.png');?>" width="150px" alt="<?php echo site_url();?>"/></a>
     </div>
+        <div class="collapse navbar-collapse">
     <div id="navbar" class="navbar-collapse">
         <div class="navbar-right">
             <a href="#"><i class="fa fa-search fa-2x" aria-hidden="false"></i></a>
@@ -70,6 +71,7 @@
             </span>
         </div>
     </div><!--/.navbar-collapse -->
+        </div>
     </div>
 </nav>
 

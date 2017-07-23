@@ -42,8 +42,11 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
     <![endif]-->
+
+<!--      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+<!--      <link rel="stylesheet" href="--><?php //echo base_url('templates/slide/');?><!--css/style.css">-->
+
     <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese');
     </style>
@@ -80,6 +83,9 @@
             <?php if ($this->router->fetch_method() == "create_a_rent"): ?>
                 <?php $this->load->view('main/user/index');?>
             <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "userrentsuccess"): ?>
+                <?php $this->load->view('main/user/userrentsuccess');?>
+            <?php endif; ?>
 
 
         <?php endif;?>
@@ -92,6 +98,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
+
+<!--    <script src="--><?php //echo base_url('templates/slide/');?><!--js/index.js"></script>-->
 
     <script type="text/javascript">
          
@@ -106,7 +114,7 @@
 		})
 	})
 </script>
- 
+
 
         
   </body>
