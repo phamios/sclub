@@ -169,7 +169,7 @@ class User_model extends CI_Model
         $this->db->from("tbl_user");
         $this->db->where("email", $email);   
         $this->db->where("isDeleted", 0);
-        if($userId != 0){
+        if($userId != 0) {
             $this->db->where("userId !=", $userId);
         }
         $query = $this->db->get();
@@ -224,6 +224,13 @@ class User_model extends CI_Model
         $this->db->where('id', $userId);
         $this->db->update('tbl_userinfo', $userDetails);
         
+        return TRUE;
+    }
+
+    function updateItemStatus($itemId)
+    {
+        $this->db->query("update tbl_useritem set status = 1 - status where id = ".$itemId);
+
         return TRUE;
     }
     

@@ -61,7 +61,8 @@
                       <td><?php echo $record->rentpurpose ?></td>
                       <td><?php echo $record->itemcategoryname ?></td>
                       <td class="text-center">
-                          <form action="<?php echo base_url().'admincp/user/updateItem/'.$record->itemid; ?>" method="post" id="updateItem" role="form" >
+                          <form action="<?php echo base_url().'admincp/user/updateItem' ?>" method="post" id="updateItem" role="form" >
+                            <input type="hidden" name="itemId" value= <?php echo $record->itemid ?> />
                             <div class="box-footer">
                                 <input type="submit" class="btn btn-primary" value="Update" name = "btnSubmitForm" />
                             </div>

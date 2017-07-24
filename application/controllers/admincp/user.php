@@ -211,6 +211,30 @@ class User extends BaseController
             $this->loadViews("admin/editOld", $this->global, $data, NULL);
         }
     }
+
+    function updateItem()
+    {
+        if($this->isAdmin() == TRUE)
+        {
+            $this->loadThis();
+        }
+        else
+        {
+            $itemId = $this->input->post('itemId');
+            $result = $this->user_model->updateItemStatus($itemId);
+                
+                if($result == true)
+                {
+                    $this->session->set_flashdata('success', 'Item updated successfully');
+                }
+                else
+                {
+                    $this->session->set_flashdata('error', 'Item updation failed');
+                }
+                
+                redirect('admincp/user/itemListing');
+        }
+    }
     
     
     /**
