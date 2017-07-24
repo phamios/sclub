@@ -86,9 +86,22 @@
             <?php if ($this->router->fetch_method() == "userrentsuccess"): ?>
                 <?php $this->load->view('main/user/userrentsuccess');?>
             <?php endif; ?>
-
-
         <?php endif;?>
+
+        <?php if ($this->router->fetch_class() == "info"): ?>
+            <?php if ($this->router->fetch_method() == "loan"): ?>
+                <?php $this->load->view('main/info/loan');?>
+            <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "policy"): ?>
+                <?php $this->load->view('main/info/policy');?>
+            <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "knowledge"): ?>
+                <?php $this->load->view('main/info/knowledge');?>
+            <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "aboutus"): ?>
+                <?php $this->load->view('main/info/aboutus');?>
+            <?php endif; ?>
+        <?php endif; ?>
         
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

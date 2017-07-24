@@ -6,9 +6,10 @@
  <a href="#">&nbsp;</a>
   <a href="#">Menu</a>
   <a href="#">&nbsp;</a>
-  <a href="#">Vay thế chấp</a>
-  <a href="#">Kiến thức tài chính</a> 
-  <a href="#">Về chúng tôi</a>
+  <a href="<?php echo site_url('index.php/info/loan');?>">Vay thế chấp</a>
+  <a href="<?php echo site_url('index.php/info/knowledge');?>">Kiến thức tài chính</a>
+    <a href="<?php echo site_url('index.php/info/policy');?>">Chính sách</a>
+  <a href="<?php echo site_url('index.php/info/aboutus');?>">Về chúng tôi</a>
 </div>
 
 <!-- Login form right -->
@@ -60,10 +61,12 @@
         </button>
         <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
         <a href="<?php echo site_url();?>" ><img src="<?php echo base_url('templates/images/logo.png');?>" width="150px" alt="<?php echo site_url();?>"/></a>
+
     </div>
         <div class="collapse navbar-collapse">
     <div id="navbar" class="navbar-collapse">
         <div class="navbar-right">
+            <span style="color:white;font-size:18px;"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 1900 0043</span> &nbsp;
             <a href="#"><i class="fa fa-search fa-2x" aria-hidden="false"></i></a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNavRight()">

@@ -63,6 +63,7 @@ class Home extends CI_Controller {
                 $userpass = $this->input->post('userpass', true);
                 $useridentitynumber = $this->input->post('useridentitynumber', true);
                 $identityaddress = $this->input->post('identityaddress', true);
+                $useraddress = $this->input->post('useraddress',true);
                 $useremail = $this->input->post('useremail', true);
                 $userpassagain = $this->input->post('userpassagain', true);
                 if($userpass == $userpassagain){

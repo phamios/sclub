@@ -108,7 +108,7 @@ class Userinfo_model extends CI_Model {
     }
 
     public function insertUserStep1($usertype=null,$username=null,$fullname=null,$socialnumber=null,$placesocialnumber=null,
-                    $userpass=null,$useremail=null,$userphone=null,$datenumber=null){
+                    $userpass=null,$useremail=null,$userphone=null,$datenumber=null,$useraddress = null){
         $username = $useremail;
         if($this->checkExitUser($username) == 1){
             $data = array( 
@@ -122,8 +122,7 @@ class Userinfo_model extends CI_Model {
             $this->db->insert($this->db_user,$data);
             $id = $this->db->insert_id();
             $this->db->trans_complete();
-            $useraddress="";
-             $data2 = array( 
+             $data2 = array(
                 'id'=>$id,
                 'fullname'=>$fullname,
                 'socialnumber'=>$socialnumber, 

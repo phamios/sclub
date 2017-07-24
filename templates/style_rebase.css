@@ -101,15 +101,17 @@ body {
     .jumbotron { 
         padding-top: 48px;
         padding-bottom: 0px;
+        margin-bottom:0px;
     }
 }
  .jumbotron { 
         padding-top: 48px;
         padding-bottom: 0px;
+     margin-bottom:0px;
  }
-    .textintro-home{
-        padding-top:20px;
-    }
+.textintro-home{
+    padding-top:20px;
+}
 
 .content_right_menu{
     padding:25px;
