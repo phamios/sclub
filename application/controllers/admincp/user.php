@@ -251,7 +251,6 @@ class User extends BaseController
         }
     }
 
-
     /**
      * This function is used to delete the user using userId
      * @return boolean $result : TRUE / FALSE
