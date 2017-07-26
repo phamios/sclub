@@ -3,7 +3,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>CÁC KHOẢN ĐẦU TƯ CỦA BẠN</h5>
+                    <h5><b>CÁC KHOẢN ĐẦU TƯ CỦA BẠN</b></h5>
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-4">Bảo Việt - Mandiri</div>

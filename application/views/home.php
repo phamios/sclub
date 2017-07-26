@@ -54,7 +54,7 @@
   </head>
   <body>
     <?php $this->load->view('widget/header');?>
-    <div id="main">
+    <div class="container">
         <?php if ($this->router->fetch_class() == "home"): ?>
             <?php if ($this->router->fetch_method() == "index"): ?>
                 <?php $this->load->view('main/index');?> 
