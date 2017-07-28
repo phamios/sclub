@@ -35,6 +35,19 @@
     </div>
     <hr/>
     <div class="row">
+        <div class="col-md-3"> </div>
+        <div class="col-md-6"> 
+            
+            <input type="range" min="1000000" max="1000000000000" step="1000000" value="3000000" data-orientation="vertical"  id = "rangerspeed" name = "rangerspeed" >
+            <p>&nbsp;</p><p>&nbsp;</p>
+
+            
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="http://rangeslider.js.org/assets/rangeslider.js/dist/rangeslider.min.js" async defer></script>
+        </div>
+        <div class="col-md-3"> </div>
+    </div>
+    <div class="row">
         <div class="col-md-4">Thời gian vay ( ngày ) </div>
         <div class="col-md-4">Lãi uất</div>
         <div class="col-md-4">Tiền gốc và lãi</div>
@@ -46,6 +59,7 @@
             function myFunction() {
                 var amount = document.getElementById('formattedNumberField').value;
                 var result = parseInt(amount.replace(",", ""));
+                document.getElementById("rangerspeed").value = result;
                 var day_amount = $("#day_amount");
                 day_amount[0].firstChild.nodeValue = result/1000 ;
                 var rate_amount = $("#rate_amount");

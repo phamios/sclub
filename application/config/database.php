@@ -77,7 +77,11 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '123456a@',
+<<<<<<< HEAD
+	'password' => '',
+=======
+	'password' => '',
+>>>>>>> a8e6498d97180dd808bba2d776fdd51313a6ecfb
 	'database' => 'sclub',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
