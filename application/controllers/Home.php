@@ -180,19 +180,25 @@ class Home extends CI_Controller {
             redirect('home/login');
         }else{
             if(isset($_REQUEST['btnSubmit'])){
-                $userid = $this->session->userdata('user_id');
-                $itemcategoryid = $this->input->post('itemcategoryid',true);
-                $itemdesc = $this->input->post('itemdesc',true);
-                $rentpurpose = $this->input->post('rentpurpose',true);
-                $rentamount = $this->input->post('rentamount',true);
-                $itemimages = $this->do_upload_image($this->upload_dir,'itemimage');
-                $this->load->model('userrent_model');
-                $result  = $this->userrent_model->insertRent($userid,$itemcategoryid,$rentpurpose,$itemdesc,$rentamount,$itemimages);
-                if($result){
-                    redirect('home/userrentsuccess');
-                }else{
-                    redirect('home/create_a_rent');
+                $agreerent = $this->input->post('agreerent',true);
+                if($agreerent == 1){
+                    $userid = $this->session->userdata('user_id');
+                    $itemcategoryid = $this->input->post('itemcategoryid',true);
+                    $itemdesc = $this->input->post('itemdesc',true);
+                    $rentpurpose = $this->input->post('rentpurpose',true);
+                    $rentamount = $this->input->post('rentamount',true);
+                    $itemimages = $this->do_upload_image($this->upload_dir,'itemimage');
+                    $this->load->model('userrent_model');
+                    $result  = $this->userrent_model->insertRent($userid,$itemcategoryid,$rentpurpose,$itemdesc,$rentamount,$itemimages);
+                    if($result){
+                        redirect('home/userrentsuccess');
+                    }else{
+                        redirect('home/create_a_rent');
+                    }
+                } else {
+                    redirect('home/userrent');
                 }
+                
             }
             if(isset($_REQUEST['btnCancel'])){
                 redirect('home/user');
