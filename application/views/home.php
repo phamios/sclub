@@ -33,6 +33,8 @@
         document.getElementById("mySidenavRight").style.width = "0";
         document.getElementById("main").style.marginRight= "0"; 
     }
+
+  
     </script>
 
 
@@ -51,10 +53,12 @@
     @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese');
     </style>
 
+    <link rel="stylesheet" href="<?php echo base_url('templates/js/rangeslider.css') ?>">
+
   </head>
   <body>
     <?php $this->load->view('widget/header');?>
-    <div id="main">
+    <div class="container">
         <?php if ($this->router->fetch_class() == "home"): ?>
             <?php if ($this->router->fetch_method() == "index"): ?>
                 <?php $this->load->view('main/index');?> 
@@ -125,7 +129,23 @@
 			todayHighlight: true,
 			autoclose: true,
 		})
-	})
+	}) 
+</script>
+
+<script src="<?php echo base_url('templates/js/rangeslider.min.js');?>"></script>
+<script>
+    // Initialize a new plugin instance for all
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider();
+
+    // Destroy all plugin instances created from the
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider('destroy');
+
+    // Update all rangeslider instances for all
+    // e.g. $('input[type="range"]') elements.
+    // Usefull if you changed some attributes e.g. `min` or `max` etc.
+    $('input[type="range"]').rangeslider('update', true);
 </script>
 
 

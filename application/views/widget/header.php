@@ -67,7 +67,6 @@
     <div id="navbar" class="navbar-collapse">
         <div class="navbar-right">
             <span style="color:white;font-size:18px;"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 1900 0043</span> &nbsp;
-            <a href="#"><i class="fa fa-search fa-2x" aria-hidden="false"></i></a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNavRight()">
                 <i class="fa fa-user" aria-hidden="false"></i>

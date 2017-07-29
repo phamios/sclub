@@ -8,6 +8,8 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="<?php echo site_url('home/add_bank');?>"><i class="fa fa-university" aria-hidden="true"></i> Tài khoản ngân hàng</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="<?php echo site_url('home/investor');?>"><i class="fa fa-coffee" aria-hidden="true"></i> Đầu tư </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="<?php echo site_url('home/logout');?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Thoát</a>
                 </div>
             </span>
