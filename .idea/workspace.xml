@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5bc5855-d44b-46e4-b475-d7ebfc41df86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Info.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/main/info/aboutus.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/main/info/knowledge.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/main/info/loan.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/main/info/policy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/images/font.png" afterPath="$PROJECT_DIR$/templates/images/font.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Home.php" afterPath="$PROJECT_DIR$/application/controllers/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/UserInfo_model.php" afterPath="$PROJECT_DIR$/application/models/UserInfo_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/index.php" afterPath="$PROJECT_DIR$/application/views/main/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/register/index.php" afterPath="$PROJECT_DIR$/application/views/main/register/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/widget/header.php" afterPath="$PROJECT_DIR$/application/views/widget/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/style_rebase.css" afterPath="$PROJECT_DIR$/templates/style_rebase.css" />
-    </list>
+    <list default="true" id="c5bc5855-d44b-46e4-b475-d7ebfc41df86" name="Default" comment="" />
     <ignored path="sclub.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -54,8 +39,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/widget/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="68" column="139" lean-forward="false" selection-start-line="68" selection-start-column="139" selection-end-line="68" selection-end-column="139" />
+            <state relative-caret-position="610">
+              <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
               <folding>
                 <element signature="e#3657#3663#0#HTML" expanded="true" />
               </folding>
@@ -489,12 +474,12 @@
       <workItem from="1500736179954" duration="33082000" />
       <workItem from="1500855764547" duration="588000" />
       <workItem from="1500890646348" duration="618000" />
-      <workItem from="1500908565946" duration="4125000" />
+      <workItem from="1500908565946" duration="4532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38413000" />
+    <option name="totallyTimeSpent" value="38820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="742" extended-state="6" />
@@ -943,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/widget/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="68" column="139" lean-forward="false" selection-start-line="68" selection-start-column="139" selection-end-line="68" selection-end-column="139" />
+        <state relative-caret-position="610">
+          <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
           <folding>
             <element signature="e#3657#3663#0#HTML" expanded="true" />
           </folding>
