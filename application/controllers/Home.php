@@ -158,6 +158,17 @@ class Home extends CI_Controller {
         }
     }
 
+    public function createinvestor(){
+        if ($this->session->userdata('user_id') == null) {
+            redirect('home/login');
+        }else{
+            $this->load->model('userinfo_model');
+            $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
+            $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $this->load->view('home',$data);
+        }
+    }
+
     public function userrent(){
         if ($this->session->userdata('user_id') == null) {
             redirect('home/login');
