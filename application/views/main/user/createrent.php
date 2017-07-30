@@ -49,7 +49,7 @@
     </div>
     <div class="row">
         <div class="col-md-4">Thời gian vay ( ngày ) </div>
-        <div class="col-md-4">Lãi uất</div>
+        <div class="col-md-4">Lãi suất</div>
         <div class="col-md-4">Tiền gốc và lãi</div>
     </div>
     <div class="row" style="padding-right:20px;">

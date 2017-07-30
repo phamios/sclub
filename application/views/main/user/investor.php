@@ -14,42 +14,47 @@
             </div>
 
 <!--            Danh sách các khoản đầu tư -->
+            <?php if($listinvest <> null):?>
+            <?php foreach($listinvest as $investor):?>
             <hr/>
             <div class="row">
                 <div class="col-md-4">
-                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản đầu tư: 59.000.000 <br/>
-                    Lĩnh vực đầu tư: <span style="color:#e67e22">Đầu tư dự án</span><br/>
-                    Tình trạng:  <span style="color:#e67e22">Chờ</span><br/>
+                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản đầu tư: <?php echo number_format($investor->investamount);?> <br/>
+                    Lĩnh vực đầu tư: <span style="color:#e67e22">
+                        <?php foreach($allcate as $cate):?>
+                            <?php if($cate->id == $investor->investcateid):?>
+                                <?php echo $cate->investcatename;?>
+                            <?php endif;?>
+                        <?php endforeach;?>
+                    </span><br/>
+                    Tình trạng:  <span style="color:#e67e22">
+                        <?php if($investor == 1):?>
+                                Đang hoạt động 
+                            <?php else:?>
+                                Đang Chờ duyệt 
+                        <?php endif;?>
+                    </span><br/>
                 </div>
                 <div class="col-md-8" style="float:right;" style="background-color: #e67e22;color:white; line-height: 2px;">
                     <div class="panel panel-warning">
                     </div>
-                    <small class="pull-right">Thời gian đầu tư 15 tháng</small>
+                    <small class="pull-right">Thời gian đầu tư: <?php echo $investor->investtime?> tháng</small>
                 </div>
 
             </div>
+            <?php endforeach;?>
+            <?php else:?>
+                <h3>Hiện tại bạn chưa có khoản đầu tư nào !</h3>
+            <?php endif;?>
 
 
-            <hr/>
-            <div class="row">
-                <div class="col-md-4">
-                    <i class="fa fa-tags" aria-hidden="true"></i> Khoản đầu tư: 20.000.000 <br/>
-                    Lĩnh vực đầu tư: <span style="color:#e67e22">Cho vay thế chấp</span><br/>
-                    Tình trạng:  <span style="color:#e67e22">Đang tiến hành</span><br/>
-                </div>
-                <div class="col-md-8" style="float:right;" style="background-color: #e67e22;color:white; line-height: 2px;">
-                    <div class="panel panel-warning">
-                    </div>
-                    <small class="pull-right">Thời gian đầu tư 24 tháng</small>
-                </div>
-
-            </div>
+         
 
             <br><br>
 
-            <a href="/tags/diaspora" class="tag">#diaspora</a>
+            <!-- <a href="/tags/diaspora" class="tag">#diaspora</a>
             <a href="/tags/hashtag" class="tag">#hashtag</a>
-            <a href="/tags/caturday" class="tag">#caturday</a>
+            <a href="/tags/caturday" class="tag">#caturday</a> -->
         </div>
     </div>
 </div>

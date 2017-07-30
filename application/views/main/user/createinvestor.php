@@ -1,4 +1,4 @@
-<?php echo form_open_multipart('/home/create_a_rent', array('role' => "form")); ?>
+<?php echo form_open_multipart('/home/createinvestor', array('role' => "form")); ?>
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <hr/>
     <div class="row">
@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-8">
             Số tiền cần vay:
-            <input type="text" id="formattedNumberField" class="form-control" name="rentamount" placeholder=" ví dụ 10000000" name="rentamount" style="display: inline;width:200px;"/> VNĐ
+            <input type="text" id="formattedNumberField" class="form-control" name="investamount" placeholder=" ví dụ 10000000" name="rentamount" style="display: inline;width:200px;"/> VNĐ
 
             <script type="text/javascript">
                 var fnf = document.getElementById("formattedNumberField");
@@ -47,14 +47,13 @@
         <div class="col-md-3"> </div>
     </div>
     <div class="row">
-        <div class="col-md-4">Thời gian vay ( ngày ) </div>
-        <div class="col-md-4">Lãi uất</div>
+        <div class="col-md-4">Thời gian đầu tư ( ngày ) </div>
+        <div class="col-md-4">Lãi xuất</div>
         <div class="col-md-4">Tiền gốc và lãi</div>
     </div>
     <div class="row" style="padding-right:20px;">
         <script>
             document.getElementById("formattedNumberField").addEventListener("change", myFunction);
-
             function myFunction() {
                 var amount = document.getElementById('formattedNumberField').value;
                 var result = parseInt(amount.replace(",", ""));
@@ -80,33 +79,19 @@
         <div class="col-md-4" style="background-color: #ecf0f1;" id="pay_amount">10.000.000</div>
     </div>
     <hr/>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">Mục đích vay:
-            <input type="text" class="form-control" name="rentpurpose" placeholder="Mô tả mục đích vay tại đây" />
-        </div>
-        <div class="col-md-4"></div>
-    </div>
-    <hr/>
 
     <div class="row" style="padding:10px;">
-        <div class="col-md-6">
-            <h4>Tài sản thế chấp</h4>
-        <?php if($listallCateItem <> null):?>
-            <?php foreach($listallCateItem as $itemcate):?>
-            <div class="col-md-4" style="padding:10px;">
-                <input type="radio" name="itemcategoryid" value="<?php echo $itemcate->id?>"> <?php echo $itemcate->categoryname?><br>
-            </div>
-            <?php endforeach;?>
-        <?php endif;?>
+        <h2>Lĩnh vực và khu vực đầu tư</h2>
+        <div class="col-md-4">
+            <select name="investcate">
+                <option value="0">- Chọn -</option>
+                <?php foreach($allcate as $cate):?>
+                <option value="<?php echo $cate->id?>"><?php echo $cate->investcatename;?></option>
+                <?php endforeach;?>
+            </select> 
         </div>
-        <div class="col-md-6">
-            <h4>Mô tả sản phẩm:</h4>
-            <textarea class="form-control" name="itemdesc" placeholder="Nội dung, mô tả sản phẩm của bạn cần thế chấp."></textarea>
-            <br/>
-            Ảnh ản phẩm:
-            <input type="file" class="form-control" value="" name="itemimage"/>
-        </div>
+        <div class="col-md-4"><input type="text" name="district" class="form-control" placeholder=" Quận huyện" /></div>
+        <div class="col-md-4"> <input type="text" name="city" class="form-control" placeholder=" Thành phố"/></div>
     </div>
     <hr/>
     <center>
@@ -116,7 +101,7 @@
     </center>
     <hr/>
     <center>
-        <button class="btn btn-primary" name="btnSubmit" >Tạo khoản vay</button>
+        <button class="btn btn-primary" name="btnSubmit" >Đăng ký ngay</button>
         <button class="btn btn-default" name="btnCancel" > Huỷ bỏ </button>
     </center>
 </div>

@@ -96,6 +96,9 @@
             <?php if ($this->router->fetch_method() == "userrentsuccess"): ?>
                 <?php $this->load->view('main/user/userrentsuccess');?>
             <?php endif; ?>
+            <?php if ($this->router->fetch_method() == "investorcreatesuccess"): ?>
+                <?php $this->load->view('main/user/createinvestsuccess');?>
+            <?php endif; ?>
         <?php endif;?>
 
         <?php if ($this->router->fetch_class() == "info"): ?>

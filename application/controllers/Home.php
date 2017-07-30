@@ -18,7 +18,10 @@ class Home extends CI_Controller {
         if ($this->session->userdata('user_id') == null) {
             $this->load->view('home');
         } else {
-            redirect('home/user/'.md5($this->session->userdata('user_id')));
+            $this->load->model('userinfo_model');
+            $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
+            $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $this->load->view('home',$data);
         }
     }
 
@@ -152,8 +155,23 @@ class Home extends CI_Controller {
             redirect('home/login');
         }else{
             $this->load->model('userinfo_model');
+            $this->load->model('investor_model');
+             $data['allcate'] = $this->investor_model->listallcate();
+            $data['listinvest'] = $this->investor_model->listallinvest($this->session->userdata('user_id'));
             $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
             $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $this->load->view('home',$data);
+        }
+    }
+
+    public function investorcreatesuccess($error= null){
+        if ($this->session->userdata('user_id') == null) {
+            redirect('home/login');
+        }else{
+            $this->load->model('userinfo_model');
+            $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
+            $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
+            $data['email'] = $this->userinfo_model->getUserEmail($this->session->userdata('user_id'));
             $this->load->view('home',$data);
         }
     }
@@ -163,6 +181,22 @@ class Home extends CI_Controller {
             redirect('home/login');
         }else{
             $this->load->model('userinfo_model');
+            $this->load->model('investor_model');
+             if(isset($_REQUEST['btnSubmit'])){
+                $agreerent = $this->input->post('agreerent',true);
+                if($agreerent == 1){
+                   $userid = $this->session->userdata('user_id');
+                   $investamount = $this->input->post('investamount',true);
+                   $investcate = $this->input->post('investcate',true);
+                   $district = $this->input->post('district',true);
+                   $city = $this->input->post('city',true);
+                   $this->investor_model->insertinvest($userid,$investcate , $investamount,$district, $city);
+                   redirect("home/investorcreatesuccess");
+                } else {
+                    redirect("home/investor");
+                }
+             } 
+            $data['allcate'] = $this->investor_model->listallcate();
             $data['userinfos'] = $this->userinfo_model->getDetailsUserInfo($this->session->userdata('user_id'));
             $data['fullname'] = $this->userinfo_model->getFullNae($this->session->userdata('user_id'));
             $this->load->view('home',$data);
