@@ -41,6 +41,7 @@
                                 Đang phê duyệt
                         <?php endif;?>
                     </span><br/>
+                    
                 </div>
                 <div class="col-md-8" style="float:right;" style="background-color: #e67e22;color:white; line-height: 2px;">
                     <div class="panel panel-warning">

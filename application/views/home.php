@@ -11,7 +11,10 @@
     <link href="<?php echo base_url('templates/bootraps');?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('templates');?>/style_rebase.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url() ?>/templates/font/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
    <script>
+
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
@@ -81,6 +84,9 @@
             <?php if ($this->router->fetch_method() == "investor"): ?>
                 <?php $this->load->view('main/user/index');?>
             <?php endif; ?>
+             <?php if ($this->router->fetch_method() == "createinvestor"): ?>
+                <?php $this->load->view('main/user/index');?>
+            <?php endif; ?>
             <?php if ($this->router->fetch_method() == "userrent"): ?>
                 <?php $this->load->view('main/user/index');?>
             <?php endif; ?>
@@ -109,7 +115,7 @@
         
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo base_url('templates/bootraps');?>/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>

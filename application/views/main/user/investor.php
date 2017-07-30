@@ -6,7 +6,11 @@
                     <h5><b>CÁC KHOẢN ĐẦU TƯ CỦA BẠN</b></h5>
                 </div>
                 <div class="col-md-2"></div>
-                <div class="col-md-4">Bảo Việt - Mandiri</div>
+                <div class="col-md-4">
+                <a class="btn btn-success" href="<?php echo site_url('home/createinvestor');?>"   id="dropdownMenu1"   style="background-color: #f39c12;border-color: #f39c12;">
+                        Tạo Đầu Tư mới
+                    </a>
+                </div>
             </div>
 
 <!--            Danh sách các khoản đầu tư -->
