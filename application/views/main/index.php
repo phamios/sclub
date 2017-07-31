@@ -54,46 +54,7 @@
         </div>
 
 </div>
-    <div class="container-fluid" style="background:#000;min-height:300px;padding:30px; color:white;">
-
-         <div class="col-md-3">
-            <p><span style="font-weight: bold;">Vay thế chấp</span></p>
-            <p>&nbsp;</p>
-            <p>Xe ô tô</p>
-            <p>Bất động sản</p>
-            <p>Hàng hoá</p>
-            <p>Cổ phiếu, trái phiếu</p>
-            <p>Bảo lãnh thanh toán</p>
-            <p>Tiền điện tử</p>
-        </div>
-
-        <div class="col-md-3">
-            <p><span style="font-weight: bold;">Hợp tác đầu tư</span></p>
-            <p>&nbsp;</p>
-            <p>Đầu tư ngắn hạn</p>
-            <p>Đầu tư dài hạn</p>
-        </div>
-
-        <div class="col-md-3">
-            <p><span style="font-weight: bold;">Kiến thức tài chính</span></p>
-            <p>&nbsp;</p>
-            <p>Kiến thức quản lý tài chính</p>
-            <p>Kiến thức thẩm định dự án đầu tư</p>
-            <p>Kiến thức quản lý dự án đầu tư</p>
-            <p>Kiến thức quản trị nhân lực</p>
-            <p>Kiến thức quản trị đầu tư</p>
-            <p>Cộng đồng chuyên gia tài chính</p>
-        </div> 
-        <div class="col-md-3">
-            <p><span style="font-weight: bold;">Về chúng tôi</span></p>
-            <p>&nbsp;</p>
-            <p>Giới thiệu chung</p>
-            <p>Hội đồng thành viên</p>
-            <p>Ban giám đốc</p>
-            <p>Thương hiệu</p>
-            <p>Hệ thống và mạng lưới</p>
-        </div>  
-    </div>
+    <?php $this->load->view('widget/footer');?>
 
     <div class="container-fluid" style="background:#000;min-height:150px;padding-top:5px;">
      <footer style="text-align:left;color:grey;background:#000;">
